@@ -1,0 +1,8 @@
+{
+  "inputs": {
+    "required": ["whitepaper", "readme"]
+  },
+  "automation": {
+    "enabled": true
+  }
+}
