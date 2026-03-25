@@ -8,3 +8,4 @@ Early development.
 
 ## Documentation
 - White Paper: docs/AI_OS_White_Paper.md
+one sentence
