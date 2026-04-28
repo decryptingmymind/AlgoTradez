@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AI‑OS
 
 AI‑OS is a multi‑agent, voice‑enabled operating system layer for safely automating, orchestrating, and executing tasks across local and cloud environments.
@@ -43,3 +44,27 @@ ai‑os/
 ## User Interface
 AI‑OS is controlled through a browser‑based dashboard that acts as the system control plane.
 The UI is responsible for visibility, approvals, and orchestration — not execution.
+=======
+﻿# AlgoTradez Command Center
+
+Automated trading ecosystem built by Anthony Meza (@decryptingmymind)
+
+## Stack
+- TradingView (signals)
+- TradersPost (webhook middleware)
+- Webull + Alpaca (brokers)
+- Python (bot engine)
+- Claude AI (decision brain)
+- Docker (deployment)
+- Azure (cloud hosting)
+
+## Structure
+- /bot - trading bot engine
+- /dashboard - command center UI
+- /backtest - strategy testing
+- /configs - settings and keys
+- /logs - trade and alert logs
+
+## Status
+🔧 In development
+>>>>>>> 9bd04dc3f03fa46fac7458bdc0dc1ef5977f3ab5
