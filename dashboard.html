@@ -1,11 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AlgoTradez // AI-OS</title>
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
-<style>
+<link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAAAIAAVAgAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgGAAAAH/P/YQAAAdxJREFUeJxdk1tPFEEUhL/qyyyuq7gSQXhB4///Qz6JCQKiRK67c+kuH3pWxU466TndVVN1LkqfVue6HE4IGEkU44MMq4iuB5wDHGa4mdDPEaLANhX5pDtL+j6esDFEBIZqNBgLyAG6Fl<style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
   --g:#00ff41;--g2:#00dd33;--g3:#00bb22;--g4:#009900;--g5:#005500;
@@ -218,7 +218,7 @@ body{font-family:'Share Tech Mono',monospace;background:var(--bg);color:var(--g)
 <div class="header">
   <div>
     <div class="logo-text">ALGO TRADEZ // AI-OS</div>
-    <div class="logo-sub">MAMA NODE Â· AUTONOMOUS FINANCIAL OS</div>
+    <div class="logo-sub">MAMA NODE · AUTONOMOUS FINANCIAL OS</div>
   </div>
   <div class="header-right">
     <div id="engine-status" class="online"><div class="dot"></div>SYSTEMS ONLINE</div>
@@ -237,7 +237,7 @@ body{font-family:'Share Tech Mono',monospace;background:var(--bg);color:var(--g)
 
 <div class="body">
 
-  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• COMMAND TAB â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <!-- ═══════════════ COMMAND TAB ═══════════════ -->
   <div id="tab-command" class="tab-content active" style="flex:1;overflow:hidden;display:flex;">
     <div class="main">
 
@@ -273,8 +273,8 @@ body{font-family:'Share Tech Mono',monospace;background:var(--bg);color:var(--g)
           <span style="margin-left:auto;font-size:10px;font-family:'Rajdhani',sans-serif;color:var(--g);font-weight:700;" id="cv-price">---</span>
           <span style="font-size:8px;margin-left:8px;" id="cv-change"></span>
           <button class="chart-btn" onclick="CV.zoomIn()" title="Zoom In">+</button>
-          <button class="chart-btn" onclick="CV.zoomOut()" title="Zoom Out">âˆ’</button>
-          <button class="chart-btn" onclick="CV.resetZoom()" title="Reset">âŠ¡</button>
+          <button class="chart-btn" onclick="CV.zoomOut()" title="Zoom Out">−</button>
+          <button class="chart-btn" onclick="CV.resetZoom()" title="Reset">⊡</button>
         </div>
         <!-- Main Price Canvas -->
         <div style="position:relative;flex:3;min-height:220px;overflow:hidden;cursor:crosshair;" id="cv-main-wrap">
@@ -304,13 +304,13 @@ body{font-family:'Share Tech Mono',monospace;background:var(--bg);color:var(--g)
 
       <div class="panel">
         <div class="panel-hdr">
-          <div class="panel-title">// SCREENER Â· ALL PAIRS Â· SUPERTREND ENGINE</div>
+          <div class="panel-title">// SCREENER · ALL PAIRS · SUPERTREND ENGINE</div>
           <div class="badge live" id="screener-badge">LIVE</div>
         </div>
         <table class="stbl" style="width:100%;">
           <thead>
             <tr>
-              <th>PAIR</th><th>DIR</th><th>SCORE</th><th>STÂ·M30</th><th>STÂ·M45</th>
+              <th>PAIR</th><th>DIR</th><th>SCORE</th><th>ST·M30</th><th>ST·M45</th>
               <th>RSI</th><th>EMA20</th><th>VWAP</th><th>PRICE</th><th>UPDATED</th>
             </tr>
           </thead>
@@ -353,7 +353,7 @@ body{font-family:'Share Tech Mono',monospace;background:var(--bg);color:var(--g)
       <div class="ai-log">
         <div class="side-label">// AI DECISION LOG</div>
         <div id="ai-log-entries">
-          <div class="ai-entry"><span class="ts">09:14 </span><span class="hl">SIGNAL</span><span class="msg"> EUR/USD breakout â€” long</span></div>
+          <div class="ai-entry"><span class="ts">09:14 </span><span class="hl">SIGNAL</span><span class="msg"> EUR/USD breakout - long</span></div>
           <div class="ai-entry"><span class="ts">09:01 </span><span class="msg">VWAP reclaim. Confluence: </span><span class="hl">4/6</span></div>
           <div class="ai-entry"><span class="ts">08:45 </span><span class="msg">Supertrend bullish M30+M45</span></div>
           <div class="ai-entry"><span class="ts">08:30 </span><span class="msg">System init. Webhook </span><span class="hl">ACTIVE</span></div>
@@ -361,19 +361,19 @@ body{font-family:'Share Tech Mono',monospace;background:var(--bg);color:var(--g)
       </div>
       <div class="task-card">
         <div class="task-title">// TASK PROGRESS</div>
-        <div class="task-item done"><div class="check done">âœ“</div>Webhook live on Azure</div>
-        <div class="task-item done"><div class="check done">âœ“</div>Supertrend engine built</div>
-        <div class="task-item active"><div class="check"></div>Wire screener â†’ dashboard</div>
+        <div class="task-item done"><div class="check done">✓</div>Webhook live on Azure</div>
+        <div class="task-item done"><div class="check done">✓</div>Supertrend engine built</div>
+        <div class="task-item active"><div class="check"></div>Wire screener → dashboard</div>
         <div class="task-item"><div class="check"></div>Kill switch AUTO/PAUSE/KILL</div>
         <div class="task-item"><div class="check"></div>Mean Machine brain</div>
       </div>
     </div>
   </div>
 
-  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• INTEL TAB â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <!-- ═══════════════ INTEL TAB ═══════════════ -->
   <div id="tab-intel" class="tab-content" style="flex:1;overflow:hidden;display:none;">
     <div class="main">
-      <div class="slabel">// MARKET INTEL Â· SUPERTREND STATUS Â· ALL PAIRS</div>
+      <div class="slabel">// MARKET INTEL · SUPERTREND STATUS · ALL PAIRS</div>
       <div class="intel-grid" id="intel-grid">
         <!-- Populated by JS -->
         <div class="intel-pair"><div class="intel-pair-hdr"><span class="intel-pair-name">EUR/USD</span><span class="intel-pair-dir flat">FLAT</span></div><div class="intel-row"><span class="lbl">PRICE</span><span class="val">---</span></div><div class="intel-row"><span class="lbl">ST M30</span><span class="val">---</span></div><div class="intel-row"><span class="lbl">ST M45</span><span class="val">---</span></div><div class="intel-row"><span class="lbl">RSI</span><span class="val">---</span></div><div class="intel-row"><span class="lbl">EMA20</span><span class="val">---</span></div><div class="intel-row"><span class="lbl">VWAP</span><span class="val">---</span></div><div class="intel-row"><span class="lbl">SCORE</span><span class="val">---</span></div></div>
@@ -383,7 +383,7 @@ body{font-family:'Share Tech Mono',monospace;background:var(--bg);color:var(--g)
         <div class="intel-pair"><div class="intel-pair-hdr"><span class="intel-pair-name">USD/CAD</span><span class="intel-pair-dir flat">FLAT</span></div><div class="intel-row"><span class="lbl">PRICE</span><span class="val">---</span></div><div class="intel-row"><span class="lbl">ST M30</span><span class="val">---</span></div><div class="intel-row"><span class="lbl">ST M45</span><span class="val">---</span></div><div class="intel-row"><span class="lbl">RSI</span><span class="val">---</span></div><div class="intel-row"><span class="lbl">EMA20</span><span class="val">---</span></div><div class="intel-row"><span class="lbl">VWAP</span><span class="val">---</span></div><div class="intel-row"><span class="lbl">SCORE</span><span class="val">---</span></div></div>
       </div>
       <div class="panel">
-        <div class="panel-hdr"><div class="panel-title">// AI NOTES CONTEXT Â· MEAN MACHINE INPUT</div></div>
+        <div class="panel-hdr"><div class="panel-title">// AI NOTES CONTEXT · MEAN MACHINE INPUT</div></div>
         <div id="intel-notes" style="padding:10px 12px;font-size:9px;color:#00aa00;min-height:60px;">No notes shared yet. Add notes in NOTES tab and tag as INTEL.</div>
       </div>
     </div>
@@ -398,45 +398,45 @@ body{font-family:'Share Tech Mono',monospace;background:var(--bg);color:var(--g)
       <div class="ai-log">
         <div class="side-label">// MEAN MACHINE STATUS</div>
         <div class="ai-entry"><span class="hl">STATUS </span><span class="msg">Building phase</span></div>
-        <div class="ai-entry"><span class="hl">RAG </span><span class="msg">Pinecone Â· planned</span></div>
+        <div class="ai-entry"><span class="hl">RAG </span><span class="msg">Pinecone · planned</span></div>
         <div class="ai-entry"><span class="hl">VOICE </span><span class="msg">Phase 2</span></div>
         <div class="ai-entry"><span class="hl">NOTES </span><span class="msg">Wire pending</span></div>
       </div>
     </div>
   </div>
 
-  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• ENGINE TAB â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <!-- ═══════════════ ENGINE TAB ═══════════════ -->
   <div id="tab-engine" class="tab-content" style="flex:1;overflow:hidden;display:none;">
     <div class="main">
-      <div class="slabel">// TRADING ENGINE V1 Â· HEALTH & STATUS</div>
+      <div class="slabel">// TRADING ENGINE V1 · HEALTH & STATUS</div>
       <div class="metrics col4">
         <div class="metric"><div class="metric-label">ENGINE</div><div class="metric-val" id="eng-status">LIVE</div><div class="metric-sub">trading-engine-v1</div></div>
-        <div class="metric"><div class="metric-label">RUNTIME</div><div class="metric-val warn">Python</div><div class="metric-sub">3.11 Â· Linux B1</div></div>
-        <div class="metric"><div class="metric-label">WEBHOOK</div><div class="metric-val" id="eng-webhook">ACTIVE</div><div class="metric-sub">/webhook Â· POST</div></div>
+        <div class="metric"><div class="metric-label">RUNTIME</div><div class="metric-val warn">Python</div><div class="metric-sub">3.11 · Linux B1</div></div>
+        <div class="metric"><div class="metric-label">WEBHOOK</div><div class="metric-val" id="eng-webhook">ACTIVE</div><div class="metric-sub">/webhook · POST</div></div>
         <div class="metric"><div class="metric-label">OANDA</div><div class="metric-val warn">PRACTICE</div><div class="metric-sub">101-001-38382514-001</div></div>
       </div>
       <div class="panel">
         <div class="panel-hdr"><div class="panel-title">// SYSTEM HEALTH</div></div>
         <div class="health-row"><span class="hlbl">AZURE URL</span><span class="hval ok">trading-engine-v1.azurewebsites.net</span></div>
-        <div class="health-row"><span class="hlbl">APP SERVICE PLAN</span><span class="hval ok">my.laboratory_asp_6758 Â· B1</span></div>
+        <div class="health-row"><span class="hlbl">APP SERVICE PLAN</span><span class="hval ok">my.laboratory_asp_6758 · B1</span></div>
         <div class="health-row"><span class="hlbl">RESOURCE GROUP</span><span class="hval ok">TradingEngineV1-RG</span></div>
         <div class="health-row"><span class="hlbl">LOCATION</span><span class="hval ok">Canada Central</span></div>
         <div class="health-row"><span class="hlbl">SCREENER INTERVAL</span><span class="hval ok">Every 5 minutes</span></div>
-        <div class="health-row"><span class="hlbl">PAIRS MONITORED</span><span class="hval ok">EUR/USD Â· GBP/USD Â· USD/JPY Â· AUD/USD Â· USD/CAD</span></div>
-        <div class="health-row"><span class="hlbl">TIMEFRAMES</span><span class="hval ok">M30 Â· M45</span></div>
+        <div class="health-row"><span class="hlbl">PAIRS MONITORED</span><span class="hval ok">EUR/USD · GBP/USD · USD/JPY · AUD/USD · USD/CAD</span></div>
+        <div class="health-row"><span class="hlbl">TIMEFRAMES</span><span class="hval ok">M30 · M45</span></div>
         <div class="health-row"><span class="hlbl">CONFLUENCE THRESHOLD</span><span class="hval ok">4/6 points</span></div>
         <div class="health-row"><span class="hlbl">WEBHOOK TOKEN</span><span class="hval warn">AlgoTradez2026SecureTX</span></div>
         <div class="health-row"><span class="hlbl">LAST DEPLOY</span><span class="hval ok" id="eng-deploy">Apr 30 2026</span></div>
       </div>
       <div class="panel">
-        <div class="panel-hdr"><div class="panel-title">// SCREENER ALGO Â· ACTIVE INDICATORS</div></div>
-        <div class="health-row"><span class="hlbl">SUPERTREND M30</span><span class="hval ok">ATR 10 Â· Multiplier 2.0</span></div>
-        <div class="health-row"><span class="hlbl">SUPERTREND M45</span><span class="hval ok">ATR 10 Â· Multiplier 3.0</span></div>
-        <div class="health-row"><span class="hlbl">RSI</span><span class="hval ok">Period 14 Â· BUY &lt;45 Â· SELL &gt;55</span></div>
-        <div class="health-row"><span class="hlbl">EMA</span><span class="hval ok">EMA20 Â· EMA50 crossover</span></div>
+        <div class="panel-hdr"><div class="panel-title">// SCREENER ALGO · ACTIVE INDICATORS</div></div>
+        <div class="health-row"><span class="hlbl">SUPERTREND M30</span><span class="hval ok">ATR 10 · Multiplier 2.0</span></div>
+        <div class="health-row"><span class="hlbl">SUPERTREND M45</span><span class="hval ok">ATR 10 · Multiplier 3.0</span></div>
+        <div class="health-row"><span class="hlbl">RSI</span><span class="hval ok">Period 14 · BUY &lt;45 · SELL &gt;55</span></div>
+        <div class="health-row"><span class="hlbl">EMA</span><span class="hval ok">EMA20 · EMA50 crossover</span></div>
         <div class="health-row"><span class="hlbl">VWAP</span><span class="hval ok">Price vs VWAP bias</span></div>
         <div class="health-row"><span class="hlbl">MOMENTUM</span><span class="hval ok">3-candle close delta</span></div>
-        <div class="health-row"><span class="hlbl">NO-TRADE ZONE</span><span class="hval ok">Flat ST &lt;1 flip/5 candles â†’ skip</span></div>
+        <div class="health-row"><span class="hlbl">NO-TRADE ZONE</span><span class="hval ok">Flat ST &lt;1 flip/5 candles → skip</span></div>
       </div>
     </div>
     <div class="side">
@@ -457,20 +457,20 @@ body{font-family:'Share Tech Mono',monospace;background:var(--bg);color:var(--g)
     </div>
   </div>
 
-  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• SYSTEMS TAB â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <!-- ═══════════════ SYSTEMS TAB ═══════════════ -->
   <div id="tab-systems" class="tab-content" style="flex:1;overflow:hidden;display:none;">
     <div class="main">
-      <div class="slabel">// SYSTEM CONTROLS Â· SECURITY Â· INFRASTRUCTURE</div>
+      <div class="slabel">// SYSTEM CONTROLS · SECURITY · INFRASTRUCTURE</div>
 
       <div class="panel">
-        <div class="panel-hdr"><div class="panel-title">// KILL SWITCH Â· TRADING ENGINE CONTROL</div><div id="mode-badge" class="badge">AUTO</div></div>
+        <div class="panel-hdr"><div class="panel-title">// KILL SWITCH · TRADING ENGINE CONTROL</div><div id="mode-badge" class="badge">AUTO</div></div>
         <div class="kill-row">
-          <button class="kbtn auto active" id="btn-auto" onclick="setMode('AUTO')">âš¡ AUTO</button>
-          <button class="kbtn pause" id="btn-pause" onclick="setMode('PAUSE')">â¸ PAUSE</button>
-          <button class="kbtn kill" id="btn-kill" onclick="setMode('KILL')">â˜  KILL</button>
+          <button class="kbtn auto active" id="btn-auto" onclick="setMode('AUTO')">⚡ AUTO</button>
+          <button class="kbtn pause" id="btn-pause" onclick="setMode('PAUSE')">⏸ PAUSE</button>
+          <button class="kbtn kill" id="btn-kill" onclick="setMode('KILL')">☠ KILL</button>
         </div>
         <div style="padding:0 12px 10px;font-size:8px;color:#00aa00;">
-          AUTO = engine runs normally Â· PAUSE = holds new signals Â· KILL = halts all trading immediately
+          AUTO = engine runs normally · PAUSE = holds new signals · KILL = halts all trading immediately
         </div>
         <div class="health-row"><span class="hlbl">CURRENT MODE</span><span class="hval ok" id="mode-display">AUTO</span></div>
         <div class="health-row"><span class="hlbl">MODE CHANGED</span><span class="hval" id="mode-time">--:--:--</span></div>
@@ -480,19 +480,19 @@ body{font-family:'Share Tech Mono',monospace;background:var(--bg);color:var(--g)
         <div class="panel-hdr"><div class="panel-title">// AZURE INFRASTRUCTURE</div></div>
         <div class="health-row"><span class="hlbl">AI-OS DASHBOARD</span><span class="hval ok">algotradez-aios.azurewebsites.net</span></div>
         <div class="health-row"><span class="hlbl">TRADING ENGINE</span><span class="hval ok">trading-engine-v1.azurewebsites.net</span></div>
-        <div class="health-row"><span class="hlbl">APP SERVICE PLAN</span><span class="hval ok">asp_6758 Â· B1 Â· Linux Â· ~$13/mo</span></div>
-        <div class="health-row"><span class="hlbl">AIOS PLAN</span><span class="hval ok">asp_6759 Â· F1 Â· Windows</span></div>
-        <div class="health-row"><span class="hlbl">CREDIT REMAINING</span><span class="hval warn">$198.65 Â· Expires May 21 2026</span></div>
+        <div class="health-row"><span class="hlbl">APP SERVICE PLAN</span><span class="hval ok">asp_6758 · B1 · Linux · ~$13/mo</span></div>
+        <div class="health-row"><span class="hlbl">AIOS PLAN</span><span class="hval ok">asp_6759 · F1 · Windows</span></div>
+        <div class="health-row"><span class="hlbl">CREDIT REMAINING</span><span class="hval warn">$198.65 · Expires May 21 2026</span></div>
         <div class="health-row"><span class="hlbl">MONTHLY BURN</span><span class="hval ok">~$26/mo</span></div>
         <div class="health-row"><span class="hlbl">RUNWAY</span><span class="hval warn">~7.5 months</span></div>
       </div>
 
       <div class="panel">
-        <div class="panel-hdr"><div class="panel-title">// SECURITY Â· AUTHENTICATION</div></div>
-        <div class="health-row"><span class="hlbl">BITWARDEN</span><span class="hval ok">Desktop + Extension Â· ACTIVE</span></div>
-        <div class="health-row"><span class="hlbl">YUBIKEY 1</span><span class="hval ok">Bio Series Â· USB-A Â· NFC Â· Omen Desktop</span></div>
-        <div class="health-row"><span class="hlbl">YUBIKEY 2</span><span class="hval ok">5C NFC Â· USB-C Â· Z Fold 6</span></div>
-        <div class="health-row"><span class="hlbl">PROTONVPN</span><span class="hval ok">Kill-switch ON Â· Always-on TradeMode</span></div>
+        <div class="panel-hdr"><div class="panel-title">// SECURITY · AUTHENTICATION</div></div>
+        <div class="health-row"><span class="hlbl">BITWARDEN</span><span class="hval ok">Desktop + Extension · ACTIVE</span></div>
+        <div class="health-row"><span class="hlbl">YUBIKEY 1</span><span class="hval ok">Bio Series · USB-A · NFC · Omen Desktop</span></div>
+        <div class="health-row"><span class="hlbl">YUBIKEY 2</span><span class="hval ok">5C NFC · USB-C · Z Fold 6</span></div>
+        <div class="health-row"><span class="hlbl">PROTONVPN</span><span class="hval ok">Kill-switch ON · Always-on TradeMode</span></div>
         <div class="health-row"><span class="hlbl">PASSKEYS</span><span class="hval ok">Samsung Pass + MS Password Manager</span></div>
         <div class="health-row"><span class="hlbl">FIDO2</span><span class="hval ok">Both YubiKeys registered</span></div>
       </div>
@@ -509,19 +509,83 @@ body{font-family:'Share Tech Mono',monospace;background:var(--bg);color:var(--g)
         <div class="ai-entry"><span class="hl">SEC </span><span class="msg">YubiKey auth active</span></div>
         <div class="ai-entry"><span class="hl">VPN </span><span class="msg">Kill-switch enforced</span></div>
         <div class="ai-entry"><span class="hl">AZ </span><span class="msg">Credit expires May 21</span></div>
-        <div class="ai-entry"><span class="hl">MODE </span><span class="msg">AUTO Â· Engine running</span></div>
+        <div class="ai-entry"><span class="hl">MODE </span><span class="msg">AUTO · Engine running</span></div>
       </div>
     </div>
   </div>
 
-  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• APPS TAB â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
-  <div id="tab-apps" class="tab-content" style="flex:1;overflow:hidden;display:none;"><div class="main"><div class="slabel">// APPS + TOOLS + PLATFORMS</div><div class="apps-grid"><a class="app-tile" href="https://tradingview.com" target="_blank"><div class="app-icon">TV</div><div class="app-name">TRADINGVIEW</div><div class="app-url">tradingview.com</div></a><a class="app-tile" href="https://oanda.com" target="_blank"><div class="app-icon">OA</div><div class="app-name">OANDA</div><div class="app-url">practice account</div></a><a class="app-tile" href="https://traderspost.io" target="_blank"><div class="app-icon">TP</div><div class="app-name">TRADERSPOST</div><div class="app-url">traderspost.io</div></a><a class="app-tile" href="https://webull.com" target="_blank"><div class="app-icon">WB</div><div class="app-name">WEBULL</div><div class="app-url">primary broker</div></a><a class="app-tile" href="https://coinbase.com" target="_blank"><div class="app-icon">CB</div><div class="app-name">COINBASE</div><div class="app-url">coinbase.com</div></a><a class="app-tile" href="https://portal.azure.com" target="_blank"><div class="app-icon">AZ</div><div class="app-name">AZURE PORTAL</div><div class="app-url">portal.azure.com</div></a><a class="app-tile" href="https://github.com/ai-rtony91" target="_blank"><div class="app-icon">GH</div><div class="app-name">GITHUB</div><div class="app-url">ai-rtony91</div></a><a class="app-tile" href="https://protonvpn.com" target="_blank"><div class="app-icon">VP</div><div class="app-name">PROTONVPN</div><div class="app-url">kill-switch ON</div></a><a class="app-tile" href="https://bitwarden.com" target="_blank"><div class="app-icon">BW</div><div class="app-name">BITWARDEN</div><div class="app-url">bitwarden.com</div></a></div>
+  <!-- ═══════════════ APPS TAB ═══════════════ -->
+  <div id="tab-apps" class="tab-content" style="flex:1;overflow:hidden;display:none;">
+    <div class="main">
+      <div class="slabel">// APPS · TOOLS · PLATFORMS</div>
+      <div class="apps-grid">
+        <a class="app-tile" href="https://tradingview.com" target="_blank"><div class="app-icon">📈</div><div class="app-name">TRADINGVIEW</div><div class="app-url">tradingview.com</div></a>
+        <a class="app-tile" href="https://oanda.com" target="_blank"><div class="app-icon">💹</div><div class="app-name">OANDA</div><div class="app-url">practice account</div></a>
+        <a class="app-tile" href="https://traderspost.io" target="_blank"><div class="app-icon">🔗</div><div class="app-name">TRADERSPOST</div><div class="app-url">traderspost.io</div></a>
+        <a class="app-tile" href="https://webull.com" target="_blank"><div class="app-icon">📊</div><div class="app-name">WEBULL</div><div class="app-url">primary broker · long</div></a>
+        <a class="app-tile" href="https://coinbase.com" target="_blank"><div class="app-icon">₿</div><div class="app-name">COINBASE</div><div class="app-url">coinbase.com</div></a>
+        <a class="app-tile" href="https://portal.azure.com" target="_blank"><div class="app-icon">☁</div><div class="app-name">AZURE PORTAL</div><div class="app-url">portal.azure.com</div></a>
+        <a class="app-tile" href="https://github.com/ai-rtony91" target="_blank"><div class="app-icon">🐙</div><div class="app-name">GITHUB</div><div class="app-url">ai-rtony91</div></a>
+        <a class="app-tile" href="https://protonvpn.com" target="_blank"><div class="app-icon">🛡</div><div class="app-name">PROTONVPN</div><div class="app-url">kill-switch ON</div></a>
+        <a class="app-tile" href="https://bitwarden.com" target="_blank"><div class="app-icon">🔐</div><div class="app-name">BITWARDEN</div><div class="app-url">vault · desktop app</div></a>
+        <a class="app-tile" href="https://trading-engine-v1.azurewebsites.net" target="_blank"><div class="app-icon">⚙</div><div class="app-name">TRADING ENGINE</div><div class="app-url">trading-engine-v1</div></a>
+        <a class="app-tile" href="https://algotradez-aios.azurewebsites.net" target="_blank"><div class="app-icon">🧠</div><div class="app-name">AI-OS DASHBOARD</div><div class="app-url">algotradez-aios</div></a>
+        <a class="app-tile" href="https://code.visualstudio.com" target="_blank"><div class="app-icon">💻</div><div class="app-name">VS CODE</div><div class="app-url">+ GitHub Copilot</div></a>
+      </div>
     </div>
   </div>
+
+  <!-- ═══════════════ NOTES TAB ═══════════════ -->
+  <div id="tab-notes" class="tab-content" style="flex:1;overflow:hidden;display:none;">
+    <div class="main">
+      <div class="slabel">// NOTES · SHARED WITH MEAN MACHINE + INTEL</div>
+      <div class="panel" style="flex:1;display:flex;flex-direction:column;">
+        <div class="panel-hdr">
+          <div class="panel-title">// NEW NOTE</div>
+          <div class="badge">PUSH TO AI BRAIN</div>
+        </div>
+        <div class="notes-area">
+          <textarea class="note-input" id="note-input" rows="4" placeholder="Write your market note, observation, or trade idea...&#10;&#10;e.g. EUR/USD looking weak ahead of 2PM news. VWAP rejection at 1.0850."></textarea>
+          <div class="note-meta">
+            <span class="note-tag active" id="tag-intel" onclick="toggleTag('intel')">INTEL</span>
+            <span class="note-tag" id="tag-trade" onclick="toggleTag('trade')">TRADE</span>
+            <span class="note-tag" id="tag-risk" onclick="toggleTag('risk')">RISK</span>
+            <span class="note-tag" id="tag-idea" onclick="toggleTag('idea')">IDEA</span>
+            <button class="note-btn" onclick="saveNote()">SAVE + PUSH →</button>
+          </div>
+          <div class="slabel" style="margin-top:4px;">// SAVED NOTES</div>
+          <div class="note-list" id="note-list">
+            <div style="font-size:8px;color:#00aa00;padding:8px;">No notes yet. Write above and push to AI brain.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="side">
+      <div class="side-section">
+        <div class="side-label">// NOTE STATS</div>
+        <div class="health-row"><span class="hlbl">TOTAL NOTES</span><span class="hval" id="note-count">0</span></div>
+        <div class="health-row"><span class="hlbl">INTEL TAGGED</span><span class="hval" id="note-intel-count">0</span></div>
+        <div class="health-row"><span class="hlbl">PUSHED TO AI</span><span class="hval warn" id="note-pushed">0</span></div>
+      </div>
+      <div class="ai-log">
+        <div class="side-label">// AI BRAIN STATUS</div>
+        <div class="ai-entry"><span class="hl">MEAN MACHINE </span><span class="msg">Build phase</span></div>
+        <div class="ai-entry"><span class="hl">RAG </span><span class="msg">Pinecone · planned</span></div>
+        <div class="ai-entry"><span class="hl">NOTES → </span><span class="msg">Intel feed · wired</span></div>
+        <div class="ai-entry"><span class="hl">VOICE </span><span class="msg">Phase 2 target</span></div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end body -->
+
 <script>
+// ── Clock ──────────────────────────────────────
 function pad(n){return String(n).padStart(2,'0');}
 function tick(){var d=new Date();document.getElementById('clock').textContent=pad(d.getHours())+':'+pad(d.getMinutes())+':'+pad(d.getSeconds());}
 tick();setInterval(tick,1000);
+
+// ── Tab switching ──────────────────────────────
 function switchTab(el,id){
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
   el.classList.add('active');
@@ -529,32 +593,728 @@ function switchTab(el,id){
   var tc=document.getElementById('tab-'+id);
   tc.style.display='flex';tc.classList.add('active');
 }
+
+// ── Kill Switch ────────────────────────────────
 var currentMode='AUTO';
 function setMode(m){
   currentMode=m;
-  ['auto','pause','kill'].forEach(k=>{document.getElementById('btn-'+k).classList.remove('active');});
+  ['auto','pause','kill'].forEach(k=>{
+    document.getElementById('btn-'+k).classList.remove('active');
+  });
   document.getElementById('btn-'+m.toLowerCase()).classList.add('active');
   document.getElementById('mode-display').textContent=m;
   document.getElementById('mode-badge').textContent=m;
   var d=new Date();
   document.getElementById('mode-time').textContent=pad(d.getHours())+':'+pad(d.getMinutes())+':'+pad(d.getSeconds());
+  pushAILog('MODE','Engine set to '+m);
 }
+
+// ── AI Log ─────────────────────────────────────
 function pushAILog(tag,msg){
   var d=new Date();
   var ts=pad(d.getHours())+':'+pad(d.getMinutes());
   var el=document.getElementById('ai-log-entries');
   var entry=document.createElement('div');
   entry.className='ai-entry';
-  entry.innerHTML='<span class="ts">'+ts+'</span><span class="hl">'+tag+'</span><span class="msg">'+msg+'</span>';
+  entry.innerHTML='<span class="ts">'+ts+' </span><span class="hl">'+tag+' </span><span class="msg">'+msg+'</span>';
   el.insertBefore(entry,el.firstChild);
   if(el.children.length>20)el.removeChild(el.lastChild);
+}
+
+// ── Screener Push Handler ──────────────────────
+// Called when trading engine pushes screener data
+function updateScreener(data){
+  // data = array of pair results from screener.py
+  var tbody=document.getElementById('screener-body');
+  tbody.innerHTML='';
+  var strong=0,watching=0,skipped=0;
+  data.forEach(function(r){
+    var isSignal=r.score>=4;
+    if(isSignal)strong++;else watching++;
+    var pips='';
+    for(var i=0;i<6;i++){
+      pips+='<div class="score-pip'+(i<r.score?' on':'')+'"></div>';
+    }
+    var dirClass=r.direction==='BUY'?'buy':'sell';
+    var row=document.createElement('tr');
+    row.innerHTML=
+      '<td class="pair">'+r.pair.replace('_','/')+'</td>'+
+      '<td class="'+dirClass+'">'+r.direction+'</td>'+
+      '<td><div class="score-bar">'+pips+'</div></td>'+
+      '<td class="'+r.st_m30.toLowerCase()+'">'+r.st_m30+'</td>'+
+      '<td class="'+r.st_m45.toLowerCase()+'">'+r.st_m45+'</td>'+
+      '<td style="color:'+(r.direction==='BUY'&&r.rsi<45?'var(--g)':r.direction==='SELL'&&r.rsi>55?'var(--red)':'var(--g3)')+'">'+r.rsi+'</td>'+
+      '<td style="color:var(--g2)">'+r.ema20+'</td>'+
+      '<td style="color:var(--g2)">'+r.vwap+'</td>'+
+      '<td style="color:var(--g)">'+r.price+'</td>'+
+      '<td style="color:#00aa00">'+r.timestamp+'</td>';
+    tbody.appendChild(row);
+
+    // Update intel grid
+    updateIntelPair(r);
+  });
+
+  // Update intel stats
+  document.getElementById('intel-strong').textContent=strong;
+  document.getElementById('intel-watch').textContent=watching;
+  var d=new Date();
+  document.getElementById('intel-update').textContent=pad(d.getHours())+':'+pad(d.getMinutes());
+
+  if(strong>0)pushAILog('SIGNAL',strong+' strong signal(s) detected');
+}
+
+function updateIntelPair(r){
+  var pairs=['EUR_USD','GBP_USD','USD_JPY','AUD_USD','USD_CAD'];
+  var idx=pairs.indexOf(r.pair);
+  if(idx<0)return;
+  var cards=document.querySelectorAll('.intel-pair');
+  if(!cards[idx])return;
+  var card=cards[idx];
+  var dirEl=card.querySelector('.intel-pair-dir');
+  dirEl.textContent=r.direction;
+  dirEl.className='intel-pair-dir '+(r.direction==='BUY'?'buy':'sell');
+  var rows=card.querySelectorAll('.intel-row .val');
+  if(rows.length>=7){
+    rows[0].textContent=r.price;
+    rows[1].textContent=r.st_m30;rows[1].className='val '+(r.st_m30==='BUY'?'hot':'cold');
+    rows[2].textContent=r.st_m45;rows[2].className='val '+(r.st_m45==='BUY'?'hot':'cold');
+    rows[3].textContent=r.rsi;
+    rows[4].textContent=r.ema20;
+    rows[5].textContent=r.vwap;
+    rows[6].textContent=r.score+'/6';rows[6].className='val '+(r.score>=4?'hot':'');
+  }
+}
+
+// ── Notes ──────────────────────────────────────
+var notes=[];
+var activeTags=['intel'];
+function toggleTag(t){
+  var el=document.getElementById('tag-'+t);
+  var idx=activeTags.indexOf(t);
+  if(idx>-1){activeTags.splice(idx,1);el.classList.remove('active');}
+  else{activeTags.push(t);el.classList.add('active');}
+}
+function saveNote(){
+  var txt=document.getElementById('note-input').value.trim();
+  if(!txt)return;
+  var d=new Date();
+  var note={text:txt,tags:[...activeTags],ts:pad(d.getHours())+':'+pad(d.getMinutes()),date:d.toLocaleDateString()};
+  notes.unshift(note);
+  document.getElementById('note-input').value='';
+  renderNotes();
+  // Push to Intel if tagged
+  if(note.tags.includes('intel')){
+    var intel=document.getElementById('intel-notes');
+    intel.innerHTML='';
+    notes.filter(n=>n.tags.includes('intel')).slice(0,5).forEach(function(n){
+      var div=document.createElement('div');
+      div.style.cssText='padding:6px 0;border-bottom:1px solid var(--g5);font-size:9px;color:var(--g2);';
+      div.innerHTML='<span style="color:#006600">'+n.ts+' </span><span style="color:var(--warn)">['+n.tags.join(',')+']</span><br>'+n.text;
+      intel.appendChild(div);
+    });
+  }
+  pushAILog('NOTE','New note pushed → '+note.tags.join(','));
+  updateNoteStats();
+}
+function renderNotes(){
+  var list=document.getElementById('note-list');
+  list.innerHTML='';
+  if(!notes.length){list.innerHTML='<div style="font-size:8px;color:#00aa00;padding:8px;">No notes yet.</div>';return;}
+  notes.forEach(function(n){
+    var div=document.createElement('div');
+    div.className='note-entry';
+    div.innerHTML='<span class="note-ts">'+n.date+' '+n.ts+'</span><span class="note-tag-badge">['+n.tags.join(',')+']</span><div class="note-text">'+n.text+'</div>';
+    list.appendChild(div);
+  });
+}
+function updateNoteStats(){
+  document.getElementById('note-count').textContent=notes.length;
+  document.getElementById('note-intel-count').textContent=notes.filter(n=>n.tags.includes('intel')).length;
+  document.getElementById('note-pushed').textContent=notes.length;
+}
+
+// ── Expose for trading engine push ─────────────
+window.AIOS={updateScreener:updateScreener,pushAILog:pushAILog};
+
+// ══════════════════════════════════════════════
+// CV — FULL CHART ENGINE (TradingView-style)
+// ══════════════════════════════════════════════
+var CV=(function(){
+  var S={
+    pair:'EUR_USD',tf:'M15',
+    candles:[],
+    offset:0,        // pan offset in candles
+    zoom:10,         // candle width in px
+    isDragging:false,
+    dragStartX:0,
+    dragStartOffset:0,
+    indicators:{ST:true,EMA:true,VWAP:true},
+    crosshairX:-1,crosshairY:-1,
+    hoverIdx:-1,
+    YAXIS_W:58,
+    refreshTimer:null
+  };
+
+  var TF_MAP={M15:'M15',M30:'M30',M45:'M45',H1:'H1'};
+
+  // ── Helpers ───────────────────────────────────
+  function getCanvas(id){return document.getElementById(id);}
+  function resize(c,w){
+    c.width=w;c.height=c.offsetHeight;
+    c.style.width=w+'px';
+    return{w:w,h:c.offsetHeight};
+  }
+
+  // ── Indicators ────────────────────────────────
+  function calcEMA(arr,p){
+    if(arr.length<p)return[];
+    var k=2/(p+1),res=[];
+    var seed=arr.slice(0,p).reduce((a,b)=>a+b,0)/p;
+    res=new Array(p-1).fill(null);
+    res.push(seed);
+    for(var i=p;i<arr.length;i++){res.push(arr[i]*k+res[res.length-1]*(1-k));}
+    return res;
+  }
+  function calcRSI(closes,p){
+    if(closes.length<p+1)return[];
+    var res=new Array(p).fill(null);
+    var gains=0,losses=0;
+    for(var i=1;i<=p;i++){var d=closes[i]-closes[i-1];d>0?gains+=d:losses-=d;}
+    var ag=gains/p,al=losses/p;
+    res.push(al===0?100:100-(100/(1+ag/al)));
+    for(var j=p+1;j<closes.length;j++){
+      var diff=closes[j]-closes[j-1];
+      ag=(ag*(p-1)+(diff>0?diff:0))/p;
+      al=(al*(p-1)+(diff<0?-diff:0))/p;
+      res.push(al===0?100:100-(100/(1+ag/al)));
+    }
+    return res;
+  }
+  function calcMACD(closes,f,s,sig){
+    var emaF=calcEMA(closes,f),emaS=calcEMA(closes,s);
+    var macdLine=closes.map((_,i)=>(emaF[i]!=null&&emaS[i]!=null)?emaF[i]-emaS[i]:null);
+    var macdVals=macdLine.filter(v=>v!=null);
+    var sigLine=calcEMA(macdVals,sig);
+    var sigFull=new Array(macdLine.length).fill(null);
+    var vi=0;
+    for(var i=0;i<macdLine.length;i++){if(macdLine[i]!=null){sigFull[i]=sigLine[vi]??null;vi++;}}
+    var hist=macdLine.map((v,i)=>(v!=null&&sigFull[i]!=null)?v-sigFull[i]:null);
+    return{macd:macdLine,signal:sigFull,hist};
+  }
+  function calcVWAP(candles){
+    var cumPV=0,cumV=0,res=[];
+    candles.forEach(c=>{
+      var tp=(c.h+c.l+c.c)/3;
+      cumPV+=tp*(c.v||1);cumV+=(c.v||1);
+      res.push(cumPV/cumV);
+    });
+    return res;
+  }
+  function calcSupertrend(candles,atrP,mult){
+    if(candles.length<atrP+2)return{line:[],dir:[]};
+    var trs=candles.map((c,i)=>i===0?c.h-c.l:Math.max(c.h-c.l,Math.abs(c.h-candles[i-1].c),Math.abs(c.l-candles[i-1].c)));
+    var atrs=new Array(atrP).fill(null);
+    var a=trs.slice(0,atrP).reduce((s,v)=>s+v,0)/atrP;
+    atrs.push(a);
+    for(var i=atrP;i<trs.length-1;i++){a=(a*(atrP-1)+trs[i+1])/atrP;atrs.push(a);}
+    var line=new Array(candles.length).fill(null);
+    var dir=new Array(candles.length).fill(0);
+    var prevUp=0,prevDn=0,prevDir=1;
+    for(var i=atrP;i<candles.length;i++){
+      var hl2=(candles[i].h+candles[i].l)/2;
+      var atr=atrs[i-atrP]||a;
+      var up=hl2-mult*atr,dn=hl2+mult*atr;
+      up=Math.max(up,prevUp);
+      dn=Math.min(dn,prevDn);
+      var d=prevDir;
+      if(prevDir===-1&&candles[i].c>prevDn)d=1;
+      else if(prevDir===1&&candles[i].c<prevUp)d=-1;
+      line[i]=d===1?up:dn;
+      dir[i]=d;
+      prevUp=up;prevDn=dn;prevDir=d;
+    }
+    return{line,dir};
+  }
+
+  // ── Drawing utilities ─────────────────────────
+  function drawGrid(ctx,W,H,minV,maxV,steps,fmt,yAxisW){
+    ctx.strokeStyle='#002800';ctx.lineWidth=0.5;ctx.setLineDash([2,6]);
+    ctx.font='7px Share Tech Mono,monospace';ctx.fillStyle='#005500';
+    for(var i=0;i<=steps;i++){
+      var v=minV+(maxV-minV)*(1-i/steps);
+      var y=i/steps*H;
+      ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W-yAxisW,y);ctx.stroke();
+    }
+    ctx.setLineDash([]);
+  }
+  function drawYAxis(ctx,W,H,minV,maxV,steps,fmt,decimals){
+    ctx.clearRect(0,0,W,H);
+    ctx.font='7px Share Tech Mono,monospace';ctx.fillStyle='#009900';ctx.textAlign='left';
+    for(var i=0;i<=steps;i++){
+      var v=minV+(maxV-minV)*(1-i/steps);
+      var y=i/steps*H;
+      ctx.fillText(typeof fmt==='function'?fmt(v):v.toFixed(decimals||5),2,y+4);
+    }
+  }
+
+  // ── Main render ───────────────────────────────
+  function render(){
+    var candles=S.candles;
+    if(!candles.length)return;
+
+    var mainWrap=document.getElementById('cv-main-wrap');
+    if(!mainWrap)return;
+    var totalW=mainWrap.offsetWidth;
+    var chartW=totalW-S.YAXIS_W;
+
+    // Candle count visible
+    var visible=Math.floor(chartW/S.zoom);
+    var start=Math.max(0,candles.length-visible-S.offset);
+    var end=Math.min(candles.length,start+visible);
+    var view=candles.slice(start,end);
+    if(!view.length)return;
+
+    var closes=candles.map(c=>c.c);
+    var ema20=calcEMA(closes,20);
+    var ema50=calcEMA(closes,50);
+    var vwap=calcVWAP(candles);
+    var rsi=calcRSI(closes,14);
+    var macdData=calcMACD(closes,12,26,9);
+    var st=calcSupertrend(candles,10,3.0);
+
+    // ─ Main price canvas ─
+    var mc=getCanvas('cv-main');
+    var myc=getCanvas('cv-yaxis');
+    if(!mc||!myc)return;
+    var MH=mainWrap.offsetHeight||220;
+    mc.style.width=chartW+'px';
+    mc.style.height=MH+'px';
+    mc.width=chartW;
+    mc.height=MH;
+    var ctx=mc.getContext('2d');
+    var W=chartW,H=MH;
+
+    // Price range from view
+    var highs=view.map(c=>c.h),lows=view.map(c=>c.l);
+    var maxP=Math.max(...highs),minP=Math.min(...lows);
+    var pad=(maxP-minP)*0.05||0.001;
+    maxP+=pad;minP-=pad;
+    var range=maxP-minP;
+    function py(p){return H*(1-(p-minP)/range);}
+    function candleX(i){return(i-start)*S.zoom+S.zoom*0.1;}
+    var cw=Math.max(1,S.zoom*0.8);
+
+    ctx.clearRect(0,0,W,H);
+
+    // Grid
+    ctx.strokeStyle='#001800';ctx.lineWidth=0.5;ctx.setLineDash([2,8]);
+    for(var g=0;g<5;g++){var gy=g/4*H;ctx.beginPath();ctx.moveTo(0,gy);ctx.lineTo(W,gy);ctx.stroke();}
+    ctx.setLineDash([]);
+
+    // VWAP
+    if(S.indicators.VWAP){
+      ctx.strokeStyle='rgba(255,165,0,0.7)';ctx.lineWidth=1;ctx.beginPath();
+      var vf=true;
+      for(var i=start;i<end;i++){if(vwap[i]!=null){var vx=candleX(i)+cw/2,vy=py(vwap[i]);vf?(ctx.moveTo(vx,vy),vf=false):ctx.lineTo(vx,vy);}}
+      ctx.stroke();
+    }
+
+    // EMA20 + EMA50
+    if(S.indicators.EMA){
+      [[ema20,'rgba(0,200,255,0.8)'],[ema50,'rgba(255,100,200,0.8)']].forEach(([arr,col])=>{
+        ctx.strokeStyle=col;ctx.lineWidth=1;ctx.beginPath();var ef=true;
+        for(var i=start;i<end;i++){if(arr[i]!=null){var ex=candleX(i)+cw/2,ey=py(arr[i]);ef?(ctx.moveTo(ex,ey),ef=false):ctx.lineTo(ex,ey);}}
+        ctx.stroke();
+      });
+    }
+
+    // Supertrend
+    if(S.indicators.ST){
+      for(var i=start;i<end-1;i++){
+        if(st.line[i]==null||st.line[i+1]==null)continue;
+        ctx.strokeStyle=st.dir[i]===1?'rgba(0,255,65,0.6)':'rgba(255,85,85,0.6)';
+        ctx.lineWidth=1.5;ctx.beginPath();
+        ctx.moveTo(candleX(i)+cw/2,py(st.line[i]));
+        ctx.lineTo(candleX(i+1)+cw/2,py(st.line[i+1]));
+        ctx.stroke();
+      }
+    }
+
+    // Candles
+    for(var i=start;i<end;i++){
+      var c=candles[i];var x=candleX(i);var isUp=c.c>=c.o;
+      var col=isUp?'#00ff41':'#ff5555';
+      ctx.strokeStyle=col;ctx.lineWidth=1;
+      ctx.beginPath();ctx.moveTo(x+cw/2,py(c.h));ctx.lineTo(x+cw/2,py(c.l));ctx.stroke();
+      var bt=py(Math.max(c.o,c.c)),bb=py(Math.min(c.o,c.c));
+      ctx.fillStyle=isUp?'rgba(0,255,65,0.85)':'rgba(255,85,85,0.85)';
+      ctx.fillRect(x,bt,cw,Math.max(1,bb-bt));
+    }
+
+    // Last price line
+    var last=candles[end-1];
+    var lpy=py(last.c);
+    ctx.strokeStyle='rgba(0,255,65,0.35)';ctx.lineWidth=1;ctx.setLineDash([4,4]);
+    ctx.beginPath();ctx.moveTo(0,lpy);ctx.lineTo(W,lpy);ctx.stroke();
+    ctx.setLineDash([]);
+    document.getElementById('cv-price').textContent=last.c.toFixed(5);
+    var chg=last.c-candles[0].c,pct=(chg/candles[0].c*100).toFixed(3);
+    var cel=document.getElementById('cv-change');
+    cel.textContent=(chg>=0?'+':'')+pct+'%';cel.style.color=chg>=0?'#00ff41':'#ff5555';
+
+    // Crosshair
+    if(S.crosshairX>=0&&S.crosshairX<W){
+      ctx.strokeStyle='rgba(0,255,65,0.25)';ctx.lineWidth=1;ctx.setLineDash([3,3]);
+      ctx.beginPath();ctx.moveTo(S.crosshairX,0);ctx.lineTo(S.crosshairX,H);ctx.stroke();
+      ctx.beginPath();ctx.moveTo(0,S.crosshairY);ctx.lineTo(W,S.crosshairY);ctx.stroke();
+      ctx.setLineDash([]);
+      // Price tag
+      var priceAtCross=maxP-(S.crosshairY/H)*range;
+      ctx.fillStyle='#00ff41';ctx.fillRect(W-2,S.crosshairY-8,S.YAXIS_W,16);
+      ctx.fillStyle='#000';ctx.font='7px Share Tech Mono,monospace';ctx.textAlign='left';
+      ctx.fillText(priceAtCross.toFixed(5),W,S.crosshairY+4);
+      ctx.textAlign='left';
+    }
+
+    // Y Axis
+    myc.style.width=S.YAXIS_W+'px';myc.style.height=MH+'px';
+    myc.width=S.YAXIS_W;myc.height=MH;
+    var yctx=myc.getContext('2d');
+    yctx.clearRect(0,0,S.YAXIS_W,MH);
+    yctx.font='7px Share Tech Mono,monospace';yctx.fillStyle='#009900';yctx.textAlign='left';
+    for(var g=0;g<=4;g++){
+      var gv=maxP-(g/4)*range;
+      yctx.fillText(gv.toFixed(5),2,g/4*MH+4);
+    }
+
+    // ─ RSI ─
+    renderSubPanel('cv-rsi','cv-rsi-yaxis',rsi,start,end,chartW,0,100,
+      v=>v==null?null:v,
+      function(ctx,W,H,arr,s,e){
+        // Overbought/oversold zones
+        var ob=H*(1-70/100),os=H*(1-30/100);
+        ctx.fillStyle='rgba(255,85,85,0.06)';ctx.fillRect(0,0,W,ob);
+        ctx.fillStyle='rgba(0,255,65,0.06)';ctx.fillRect(0,os,W,H-os);
+        ctx.strokeStyle='#003300';ctx.lineWidth=0.5;ctx.setLineDash([2,4]);
+        ctx.beginPath();ctx.moveTo(0,ob);ctx.lineTo(W,ob);ctx.stroke();
+        ctx.beginPath();ctx.moveTo(0,os);ctx.lineTo(W,os);ctx.stroke();
+        ctx.setLineDash([]);
+        ctx.strokeStyle='#00ccff';ctx.lineWidth=1.2;ctx.beginPath();var rf=true;
+        for(var i=s;i<e;i++){var v=arr[i];if(v==null)continue;var rx=(i-s)*S.zoom+S.zoom/2,ry=H*(1-v/100);rf?(ctx.moveTo(rx,ry),rf=false):ctx.lineTo(rx,ry);}
+        ctx.stroke();
+      },'RSI',2
+    );
+
+    // ─ MACD ─
+    var allMacd=[...macdData.macd,...macdData.hist].filter(v=>v!=null);
+    var macdMax=Math.max(...allMacd.map(Math.abs))||0.001;
+    renderSubPanel('cv-macd','cv-macd-yaxis',macdData.macd,start,end,chartW,-macdMax,macdMax,
+      v=>v,
+      function(ctx,W,H,arr,s,e){
+        function my(v){return H*(1-(v+macdMax)/(2*macdMax));}
+        // Histogram
+        for(var i=s;i<e;i++){
+          var hv=macdData.hist[i];if(hv==null)continue;
+          var hx=(i-s)*S.zoom,hw=Math.max(1,S.zoom*0.7);
+          ctx.fillStyle=hv>=0?'rgba(0,255,65,0.5)':'rgba(255,85,85,0.5)';
+          var hz=my(0),hy=my(hv);
+          ctx.fillRect(hx,Math.min(hz,hy),hw,Math.abs(hz-hy)||1);
+        }
+        // Zero line
+        ctx.strokeStyle='#003300';ctx.lineWidth=0.5;
+        ctx.beginPath();ctx.moveTo(0,my(0));ctx.lineTo(W,my(0));ctx.stroke();
+        // MACD line
+        ctx.strokeStyle='#00aaff';ctx.lineWidth=1.2;ctx.beginPath();var mf=true;
+        for(var i=s;i<e;i++){var mv=macdData.macd[i];if(mv==null)continue;var mx=(i-s)*S.zoom+S.zoom/2;mf?(ctx.moveTo(mx,my(mv)),mf=false):ctx.lineTo(mx,my(mv));}
+        ctx.stroke();
+        // Signal line
+        ctx.strokeStyle='#ff9900';ctx.lineWidth=1;ctx.beginPath();var sf=true;
+        for(var i=s;i<e;i++){var sv=macdData.signal[i];if(sv==null)continue;var sx=(i-s)*S.zoom+S.zoom/2;sf?(ctx.moveTo(sx,my(sv)),sf=false):ctx.lineTo(sx,my(sv));}
+        ctx.stroke();
+      },'MACD',6
+    );
+
+    // ─ X Axis ─
+    var xc=getCanvas('cv-xaxis');
+    if(xc){
+      xc.style.width=(chartW+S.YAXIS_W)+'px';xc.style.height='18px';
+      xc.width=chartW+S.YAXIS_W;xc.height=18;
+      var xctx=xc.getContext('2d');
+      xctx.clearRect(0,0,chartW+S.YAXIS_W,18);
+      xctx.font='7px Share Tech Mono,monospace';xctx.fillStyle='#006600';xctx.textAlign='center';
+      var step=Math.max(1,Math.floor(10/S.zoom)*5);
+      for(var i=start;i<end;i+=step){
+        var tx=candleX(i)+cw/2;
+        var label=candles[i].t||('C'+i);
+        xctx.fillText(label,tx,12);
+      }
+    }
+  }
+
+  function renderSubPanel(cid,yid,arr,start,end,chartW,minV,maxV,valFn,drawFn,label,decimals){
+    var c=getCanvas(cid);if(!c)return;
+    var W=chartW,H=c.parentElement?c.parentElement.offsetHeight:60;
+    H=H||60;
+    c.style.width=chartW+'px';
+    c.style.height=H+'px';
+    c.width=chartW;
+    c.height=H;
+    var ctx=c.getContext('2d');ctx.scale(dpr,dpr);
+    ctx.clearRect(0,0,W,H);
+    drawFn(ctx,W,H,arr,start,end);
+    // Y axis
+    var yc=getCanvas(yid);if(!yc)return;
+    yc.style.width='58px';yc.width=58;yc.height=H;
+    var yctx=yc.getContext('2d');
+    yctx.clearRect(0,0,58,H);
+    yctx.font='7px Share Tech Mono,monospace';yctx.fillStyle='#009900';yctx.textAlign='left';
+    yctx.fillText(maxV.toFixed(decimals),2,10);
+    yctx.fillText(minV.toFixed(decimals),2,H-2);
+    if(arr[end-1]!=null)yctx.fillText(arr[end-1].toFixed(decimals),2,H/2+4);
+  }
+
+  // ── Demo data ────────────────────────────────
+  function genDemo(){
+    var out=[];var p=1.0840;var now=Date.now();
+    for(var i=0;i<120;i++){
+      var o=p;
+      var dir=Math.random()>0.5?1:-1;
+      var move=dir*Math.random()*0.0012;
+      var c=o+move;
+      var h=Math.max(o,c)+Math.random()*0.0004;
+      var l=Math.min(o,c)-Math.random()*0.0004;
+      out.push({o,h,l,c,v:Math.floor(Math.random()*1000+200),t:new Date(now-i*15*60000).toISOString().slice(11,16)});
+      p=c;
+    }
+    return out.reverse();
+  }
+
+  // ── Fetch from OANDA ─────────────────────────
+  function fetch_candles(){
+    var key=window._oandaKey||'';
+    var gran=TF_MAP[S.tf]||'M15';
+    if(!key){S.candles=genDemo();render();return;}
+    fetch('https://api-fxpractice.oanda.com/v3/instruments/'+S.pair+'/candles?count=120&granularity='+gran+'&price=M',
+      {headers:{'Authorization':'Bearer '+key}})
+      .then(r=>r.json())
+      .then(d=>{
+        S.candles=(d.candles||[]).filter(c=>c.complete).map(c=>({
+          o:+c.mid.o,h:+c.mid.h,l:+c.mid.l,c:+c.mid.c,
+          v:c.volume||1,
+          t:c.time?c.time.slice(11,16):''
+        }));
+        if(!S.candles.length)S.candles=genDemo();
+        render();
+      }).catch(()=>{S.candles=genDemo();render();});
+  }
+
+  // ── Mouse events ─────────────────────────────
+  function initMouse(){
+    // Retry until DOM ready
+    var wrap=document.getElementById('cv-main-wrap');
+    if(!wrap){setTimeout(initMouse,200);return;}
+
+    // Make canvases non-interactive so wrap receives all events
+    ['cv-main','cv-yaxis'].forEach(function(id){
+      var el=document.getElementById(id);
+      if(el)el.style.pointerEvents='none';
+    });
+
+    wrap.style.userSelect='none';
+
+    wrap.addEventListener('mousedown',function(e){
+      e.preventDefault();
+      S.isDragging=true;
+      S.dragStartX=e.clientX;
+      S.dragStartOffset=S.offset;
+      wrap.style.cursor='grabbing';
+    });
+
+    window.addEventListener('mouseup',function(){
+      S.isDragging=false;
+      wrap.style.cursor='crosshair';
+    });
+
+    wrap.addEventListener('mousemove',function(e){
+      var r=wrap.getBoundingClientRect();
+      S.crosshairX=e.clientX-r.left;
+      S.crosshairY=e.clientY-r.top;
+
+      if(S.isDragging){
+        var dx=e.clientX-S.dragStartX;
+        var delta=Math.round(dx/S.zoom);
+        S.offset=Math.max(0,Math.min(S.candles.length-10,S.dragStartOffset-delta));
+      }
+
+      // Tooltip
+      var chartW=wrap.offsetWidth-S.YAXIS_W;
+      var visible=Math.floor(chartW/S.zoom);
+      var start=Math.max(0,S.candles.length-visible-S.offset);
+      var idx=Math.floor(S.crosshairX/S.zoom);
+      var ci=start+idx;
+      if(ci>=0&&ci<S.candles.length){
+        var c=S.candles[ci];
+        var tip=document.getElementById('cv-tooltip');
+        if(tip){
+          tip.style.display='block';
+          tip.style.left=Math.min(S.crosshairX+12,chartW-150)+'px';
+          tip.style.top=Math.max(4,S.crosshairY-30)+'px';
+          tip.innerHTML='<b>'+c.t+'</b> O:'+c.o.toFixed(5)+' H:'+c.h.toFixed(5)+' L:'+c.l.toFixed(5)+' C:'+c.c.toFixed(5);
+        }
+      }
+      render();
+    });
+
+    wrap.addEventListener('mouseleave',function(){
+      S.crosshairX=-1;S.crosshairY=-1;
+      S.isDragging=false;
+      var tip=document.getElementById('cv-tooltip');
+      if(tip)tip.style.display='none';
+      render();
+    });
+
+    // Wheel: Ctrl+wheel = zoom, plain wheel = pan
+    wrap.addEventListener('wheel',function(e){
+      e.preventDefault();
+      if(e.ctrlKey||e.metaKey){
+        // Zoom
+        var delta=e.deltaY<0?2:-2;
+        S.zoom=Math.max(3,Math.min(40,S.zoom+delta));
+      } else {
+        // Pan left/right
+        var steps=e.deltaY>0?3:-3;
+        S.offset=Math.max(0,Math.min(S.candles.length-10,S.offset+steps));
+      }
+      render();
+    },{passive:false});
+  }
+
+  // ── Public API ───────────────────────────────
+  return{
+    init:function(){initMouse();fetch_candles();if(S.refreshTimer)clearInterval(S.refreshTimer);S.refreshTimer=setInterval(fetch_candles,300000);},
+    setPair:function(pair,btn){
+      document.querySelectorAll('[data-pair]').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');S.pair=pair;S.offset=0;fetch_candles();
+    },
+    setTF:function(tf,btn){
+      document.querySelectorAll('[data-tf]').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');S.tf=tf;S.offset=0;fetch_candles();
+    },
+    toggleInd:function(ind,btn){
+      S.indicators[ind]=!S.indicators[ind];
+      btn.classList.toggle('active',S.indicators[ind]);render();
+    },
+    zoomIn:function(){S.zoom=Math.min(40,S.zoom+2);render();},
+    zoomOut:function(){S.zoom=Math.max(3,S.zoom-2);render();},
+    resetZoom:function(){S.zoom=10;S.offset=0;fetch_candles();},
+    render:render
+  };
+})();
+
+// ══════════════════════════════════════════════
+// TASK CORNER — CSV DRIVEN
+// ══════════════════════════════════════════════
+var taskData=[];
+var taskView='today';
+var taskExpanded=false;
+
+// Embedded CSV data from AlgoTradez_AI-OS_Roadmap.csv
+var CSV_TASKS=[
+  {phase:'PHASE_1',module:'Trading_Engine_V1',task:'Webhook_Integration',priority:'Critical',status:'Complete',target:'2026-04-27'},
+  {phase:'PHASE_1',module:'Dashboard_UI',task:'Build_Futuristic_UI',priority:'Critical',status:'In_Progress',target:'2026-05-04'},
+  {phase:'PHASE_1',module:'Trading_Engine_V1',task:'Set_Env_Variables',priority:'High',status:'Pending',target:'2026-04-28'},
+  {phase:'PHASE_1',module:'Trading_Engine_V1',task:'Test_TradingView_Alert',priority:'High',status:'Pending',target:'2026-04-29'},
+  {phase:'PHASE_1',module:'Dashboard_UI',task:'Live_Trade_Feed',priority:'High',status:'Pending',target:'2026-05-08'},
+  {phase:'PHASE_1',module:'Dashboard_UI',task:'AI_Decision_Log',priority:'High',status:'Pending',target:'2026-05-08'},
+  {phase:'PHASE_1',module:'Dashboard_UI',task:'System_Health_Monitor',priority:'Medium',status:'Pending',target:'2026-05-10'},
+  {phase:'PHASE_2',module:'Claude_API_Backend',task:'Integration_Setup',priority:'Critical',status:'Pending',target:'2026-05-15'},
+  {phase:'PHASE_2',module:'WebSocket_Updates',task:'Real_Time_Feed',priority:'Critical',status:'Pending',target:'2026-05-18'},
+  {phase:'PHASE_2',module:'Voice_Input',task:'Web_Speech_API',priority:'High',status:'Pending',target:'2026-05-20'},
+  {phase:'PHASE_3',module:'Alerts_System',task:'Neon_Animation_Engine',priority:'High',status:'Pending',target:'2026-05-28'},
+  {phase:'PHASE_3',module:'Integration_Testing',task:'End_To_End_Test',priority:'Critical',status:'Pending',target:'2026-06-08'},
+  {phase:'INFRASTRUCTURE',module:'Authentication',task:'User_Login_System',priority:'High',status:'Pending',target:'2026-06-10'},
+  {phase:'LONG_TERM',module:'AI_OS_Vision',task:'Voice_Autonomy',priority:'Critical',status:'Concept',target:'2026-08-01'},
+  {phase:'LONG_TERM',module:'AI_OS_Vision',task:'Agent_Orchestra',priority:'High',status:'Concept',target:'2026-08-15'},
+];
+
+function toggleTaskCorner(){
+  taskExpanded=!taskExpanded;
+  var tc=document.getElementById('taskCorner');
+  tc.className='task-corner '+(taskExpanded?'expanded':'collapsed');
+  document.getElementById('task-toggle-icon').textContent=taskExpanded?'▼':'▲';
+}
+
+function setTaskView(v){
+  taskView=v;
+  document.querySelectorAll('.tv-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('tv-'+v).classList.add('active');
+  renderTaskCorner();
+}
+
+function renderTaskCorner(){
+  var list=document.getElementById('tc-list');
+  var today=new Date();
+  var filtered=CSV_TASKS;
+
+  if(taskView==='today'){
+    // Show In_Progress + next Pending by priority
+    filtered=CSV_TASKS.filter(t=>t.status==='In_Progress'||t.status==='Pending').slice(0,8);
+  } else if(taskView==='phase'){
+    filtered=CSV_TASKS.filter(t=>t.phase==='PHASE_1'||t.phase==='PHASE_2');
+  }
+  // 'all' = show everything
+
+  list.innerHTML='';
+  filtered.forEach(function(t){
+    var div=document.createElement('div');
+    div.className='tc-item';
+    var taskName=t.task.replace(/_/g,' ');
+    var statusClass=t.status.replace(/\s/g,'_');
+    div.innerHTML=
+      '<div class="tc-dot '+t.status+'"></div>'+
+      '<div class="tc-text '+t.status+'">'+taskName+'</div>'+
+      '<div class="tc-phase">'+t.phase.replace('PHASE_','P')+'</div>';
+    list.appendChild(div);
+  });
+}
+
+// Init on load
+window.addEventListener('load',function(){
+  CV.init();
+  renderTaskCorner();
+  window.addEventListener('resize',function(){CV.render();});
+  setInterval(function(){CV.render();},5000);
+});
+</script>
+
+<!-- TASK CORNER (fixed bottom-right) -->
+<div class="task-corner collapsed" id="taskCorner">
+  <div class="task-corner-hdr" onclick="toggleTaskCorner()">
+    <span class="task-corner-title">// DAILY TASKS <span id="task-toggle-icon">▲</span></span>
+    <div class="task-views" onclick="event.stopPropagation()">
+      <button class="tv-btn active" id="tv-today" onclick="setTaskView('today')">TODAY</button>
+      <button class="tv-btn" id="tv-phase" onclick="setTaskView('phase')">PHASE</button>
+      <button class="tv-btn" id="tv-all" onclick="setTaskView('all')">ALL</button>
+    </div>
+  </div>
+  <div class="task-list-wrap">
+    <div id="tc-list"></div>
+  </div>
+</div>
+<script>
+function setMode(mode) {
+  fetch('https://trading-engine-v1.azurewebsites.net/mode', {
+    method: 'POST',
+    headers: {'Content-Type':'application/json'},
+    body: JSON.stringify({token:'AlgoTradez2026SecureTX', mode: mode})
+  }).then(r => r.json()).then(d => {
+    document.getElementById('mode-display').innerText = d.mode || mode;
+    document.getElementById('mode-time').innerText = new Date().toTimeString().slice(0,8);
+  }).catch(() => {
+    document.getElementById('mode-display').innerText = mode + ' (offline)';
+  });
 }
 </script>
 </body>
 </html>
-
-
-
-
-
 
