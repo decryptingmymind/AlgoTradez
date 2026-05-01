@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AlgoTradez // AI-OS</title>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Share Tech Mono',monospace;background:#000;color:#00ff41;min-height:100vh;display:flex;flex-direction:column;}
+.header{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;border-bottom:1px solid #002200;background:#000;}
+.logo-text{font-family:'Rajdhani',sans-serif;font-size:20px;font-weight:700;color:#00ff41;letter-spacing:4px;}
+.logo-sub{font-size:9px;color:#005500;letter-spacing:3px;margin-top:2px;}
+.header-right{display:flex;align-items:center;gap:20px;font-size:11px;color:#005500;}
+.online{display:flex;align-items:center;gap:6px;color:#00ff41;}
+.dot{width:7px;height:7px;background:#00ff41;border-radius:50%;animation:blink 2s infinite;}
+@keyframes blink{0%,85%,100%{opacity:1;}90%{opacity:0.1;}}
+.nav{display:flex;border-bottom:1px solid #002200;padding:0 24px;}
+.tab{padding:11px 20px;font-size:11px;font-family:'Share Tech Mono',monospace;letter-spacing:2px;text-transform:uppercase;color:#004400;cursor:pointer;border:none;background:none;border-bottom:2px solid transparent;transition:all 0.15s;}
+.tab:hover{color:#009900;}
+.tab.active{color:#00ff41;border-bottom:2px solid #00ff41;}
+.body{display:flex;flex:1;}
+.main{flex:1;padding:20px 24px;display:flex;flex-direction:column;gap:14px;}
+.section-label{font-size:9px;letter-spacing:3px;color:#004400;margin-bottom:6px;}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;}
+.metric{background:#000;border:1px solid #002200;border-top:1px solid #00ff41;padding:10px 12px;}
+.metric-label{font-size:9px;color:#005500;letter-spacing:2px;margin-bottom:5px;}
+.metric-val{font-size:22px;font-family:'Rajdhani',sans-serif;font-weight:700;color:#00ff41;}
+.metric-val.warn{color:#aaff00;}
+.metric-sub{font-size:9px;color:#003300;margin-top:3px;}
+.chart-area{background:#000;border:1px solid #002200;padding:14px;flex:1;}
+.chart-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;}
+.chart-title{font-size:10px;letter-spacing:2px;color:#009900;}
+.chart-badge{font-size:9px;padding:2px 8px;border:1px solid #004400;color:#00ff41;}
+.feed{background:#000;border:1px solid #002200;}
+.feed-header{display:flex;justify-content:space-between;align-items:center;padding:8px 14px;border-bottom:1px solid #002200;}
+.feed-title{font-size:9px;letter-spacing:2px;color:#005500;}
+.live{display:flex;align-items:center;gap:5px;font-size:9px;color:#00ff41;}
+.live-dot{width:5px;height:5px;background:#00ff41;border-radius:50%;animation:blink 1.2s infinite;}
+.row{display:grid;grid-template-columns:80px 70px 1fr 90px 80px;padding:7px 14px;border-bottom:1px solid #001100;font-size:10px;color:#004d00;align-items:center;}
+.row:hover{background:#001500;}
+.ticker{color:#00cc33;}
+.buy{color:#00ff41;}
+.exit{color:#ff4444;}
+.price{color:#009900;}
+.side{width:215px;border-left:1px solid #002200;display:flex;flex-direction:column;}
+.side-section{padding:12px 14px;border-bottom:1px solid #002200;}
+.side-label{font-size:9px;letter-spacing:3px;color:#004400;margin-bottom:8px;}
+.node{display:flex;align-items:center;gap:8px;padding:6px 8px;margin-bottom:3px;cursor:pointer;border-left:2px solid transparent;}
+.node:hover{background:#001500;}
+.node.active{background:#001500;border-left:2px solid #00ff41;}
+.node-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
+.node-dot.on{background:#00ff41;animation:blink 3s infinite;}
+.node-dot.standby{background:#aaff00;}
+.node-dot.off{background:#002200;}
+.node-name{font-size:10px;color:#009900;letter-spacing:1px;text-transform:uppercase;flex:1;}
+.node-status{font-size:9px;color:#004400;}
+.ai-log{flex:1;padding:12px 14px;overflow:hidden;}
+.ai-entry{font-size:9px;line-height:1.7;color:#004400;margin-bottom:6px;padding-left:8px;border-left:1px solid #002200;}
+.ai-entry .ts{color:#003300;}
+.ai-entry .hl{color:#00ff41;}
+.ai-entry .msg{color:#006600;}
+.cursor{display:inline-block;width:6px;height:10px;background:#00ff41;animation:cur 1s infinite;vertical-align:middle;margin-left:2px;}
+@keyframes cur{0%,49%{opacity:1;}50%,100%{opacity:0;}}
+.task-card{margin:12px;background:#050005;border:1px solid #2a0025;border-top:2px solid #7a1a5a;padding:12px 14px;}
+.task-title{font-size:9px;letter-spacing:3px;color:#4a1040;margin-bottom:8px;}
+.task-item{display:flex;align-items:center;gap:7px;font-size:10px;margin-bottom:5px;color:#3a1a35;}
+.task-item.done{color:#5a2a55;text-decoration:line-through;}
+.task-item.active{color:#c060a0;}
+.check{width:10px;height:10px;border:1px solid #2a0025;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:8px;}
+.check.done{background:#3a0535;color:#c060a0;}
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <div class="logo-text">ALGO TRADEZ // AI-OS</div>
+    <div class="logo-sub">MAMA NODE · AUTONOMOUS FINANCIAL OS</div>
+  </div>
+  <div class="header-right">
+    <div class="online"><div class="dot"></div>SYSTEMS ONLINE</div>
+    <div id="clock">--:--:--</div>
+  </div>
+</div>
+<div class="nav">
+  <button class="tab active" onclick="switchTab(this)">Trading Engine</button>
+  <button class="tab" onclick="switchTab(this)">Mean Machine</button>
+  <button class="tab" onclick="switchTab(this)">Admin</button>
+  <button class="tab" onclick="switchTab(this)">Apps +</button>
+</div>
+<div class="body">
+  <div class="main">
+    <div>
+      <div class="section-label">// LIVE METRICS · EUR/USD · 45M</div>
+      <div class="metrics">
+        <div class="metric"><div class="metric-label">ACCOUNT</div><div class="metric-val">$100K</div><div class="metric-sub">OANDA PRACTICE</div></div>
+        <div class="metric"><div class="metric-label">TODAY P&L</div><div class="metric-val">+$0.00</div><div class="metric-sub">AWAITING SIGNAL</div></div>
+        <div class="metric"><div class="metric-label">WIN RATE</div><div class="metric-val warn">57%</div><div class="metric-sub">TARGET</div></div>
+        <div class="metric"><div class="metric-label">MAX DD</div><div class="metric-val">-0.0%</div><div class="metric-sub">LIMIT -55%</div></div>
+      </div>
+    </div>
+    <div class="chart-area">
+      <div class="chart-header">
+        <div class="chart-title">// EUR/USD PRICE ACTION</div>
+        <div class="chart-badge">45M · LIVE</div>
+      </div>
+      <svg width="100%" height="140" viewBox="0 0 600 140" preserveAspectRatio="none">
+        <defs><linearGradient id="gg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#00ff41" stop-opacity="0.12"/><stop offset="100%" stop-color="#00ff41" stop-opacity="0"/></linearGradient></defs>
+        <line x1="0" y1="55" x2="600" y2="55" stroke="#002200" stroke-width="0.5" stroke-dasharray="4,6"/>
+        <line x1="0" y1="100" x2="600" y2="100" stroke="#002200" stroke-width="0.5" stroke-dasharray="4,6"/>
+        <text x="4" y="52" font-family="Share Tech Mono,monospace" font-size="9" fill="#004400">1.0850</text>
+        <text x="4" y="97" font-family="Share Tech Mono,monospace" font-size="9" fill="#004400">1.0820</text>
+        <path d="M0,95 L60,88 L120,96 L180,78 L240,83 L300,68 L360,74 L420,55 L480,48 L540,38 L600,30" stroke="#00ff41" stroke-width="1.5" fill="none"/>
+        <path d="M0,95 L60,88 L120,96 L180,78 L240,83 L300,68 L360,74 L420,55 L480,48 L540,38 L600,30 L600,140 L0,140Z" fill="url(#gg)"/>
+        <circle cx="420" cy="55" r="3" fill="#00ff41"/>
+        <circle cx="540" cy="38" r="3" fill="#00ff41"/>
+        <circle cx="360" cy="74" r="3" fill="#ff4444"/>
+      </svg>
+    </div>
+    <div class="feed">
+      <div class="feed-header"><div class="feed-title">// TRADE LOG</div><div class="live"><div class="live-dot"></div>LIVE FEED</div></div>
+      <div class="row" style="font-size:9px;color:#003300;letter-spacing:1px;"><span>TIME</span><span>PAIR</span><span>ACTION</span><span>PRICE</span><span>P&L</span></div>
+      <div class="row"><span style="color:#004d00">09:14:32</span><span class="ticker">EUR/USD</span><span class="buy">BUY</span><span class="price">1.0841</span><span class="buy">OPEN</span></div>
+      <div class="row"><span style="color:#004d00">08:59:17</span><span class="ticker">EUR/USD</span><span class="exit">EXIT</span><span class="price">1.0833</span><span style="color:#444">---</span></div>
+      <div class="row" style="opacity:0.3;"><span>--:--:--</span><span>---</span><span>AWAITING WEBHOOK<span class="cursor"></span></span><span></span><span></span></div>
+    </div>
+  </div>
+  <div class="side">
+    <div class="side-section">
+      <div class="side-label">// BABY NODES</div>
+      <div class="node active"><div class="node-dot on"></div><div class="node-name">Trading Eng.</div><div class="node-status">LIVE</div></div>
+      <div class="node"><div class="node-dot standby"></div><div class="node-name">Mean Machine</div><div class="node-status">BUILD</div></div>
+      <div class="node"><div class="node-dot off"></div><div class="node-name">Admin</div><div class="node-status">IDLE</div></div>
+      <div class="node"><div class="node-dot off"></div><div class="node-name">Apps +</div><div class="node-status">SOON</div></div>
+    </div>
+    <div class="ai-log">
+      <div class="side-label">// AI DECISION LOG</div>
+      <div class="ai-entry"><span class="ts">09:14 </span><span class="hl">SIGNAL</span><span class="msg"> EUR/USD breakout — long</span></div>
+      <div class="ai-entry"><span class="ts">09:01 </span><span class="msg">VWAP reclaim. Confluence: </span><span class="hl">4/6</span></div>
+      <div class="ai-entry"><span class="ts">08:45 </span><span class="msg">Supertrend bullish. EMA aligned.</span></div>
+      <div class="ai-entry"><span class="ts">08:30 </span><span class="msg">System init. Webhook on </span><span class="hl">/webhook</span></div>
+    </div>
+    <div class="task-card">
+      <div class="task-title">// TASK PROGRESS · TODAY</div>
+      <div class="task-item done"><div class="check done">✓</div>Webhook live on Azure</div>
+      <div class="task-item active"><div class="check"></div>Set env variables</div>
+      <div class="task-item"><div class="check"></div>Test TradingView alert</div>
+      <div class="task-item"><div class="check"></div>Build AI-OS dashboard</div>
+    </div>
+  </div>
+</div>
+<script>
+function pad(n){return String(n).padStart(2,'0');}
+function tick(){var d=new Date();document.getElementById('clock').textContent=pad(d.getHours())+':'+pad(d.getMinutes())+':'+pad(d.getSeconds());}
+tick();setInterval(tick,1000);
+function switchTab(el){document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('active');});el.classList.add('active');}
+</script>
+</body>
+</html>

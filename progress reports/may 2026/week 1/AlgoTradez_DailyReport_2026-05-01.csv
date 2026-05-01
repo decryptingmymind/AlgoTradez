@@ -1,0 +1,23 @@
+Date,Faction,Milestone,Task,Status,Notes
+2026-05-01,Trading Engine V1,Live Deployment,Azure webapp deployed (trading-engine-v1.azurewebsites.net),✅ DONE,Python 3.11 / B1 SKU
+2026-05-01,Trading Engine V1,OANDA Connection,Practice account wired (101-001-38382514-001),✅ DONE,Practice env
+2026-05-01,Trading Engine V1,Webhook,TradingView EUR/USD 45m alert → webhook live,✅ DONE,Token: AlgoTradez2026SecureTX
+2026-05-01,Trading Engine V1,Screener,screener.py built (5-pair / 5-point confluence),✅ DONE,C:\TradingEngineV1\
+2026-05-01,Trading Engine V1,Kill Switch,AUTO / PAUSE / KILL buttons on Admin tab,🔴 PENDING,Wire to Admin tab
+2026-05-01,Trading Engine V1,Dashboard Wire,Screener output → live AI-OS dashboard,🔴 PENDING,Not wired yet
+2026-05-01,AI-OS,Dashboard,Mama Node dashboard live (algotradez-aios.azurewebsites.net),✅ DONE,Black/green terminal theme
+2026-05-01,AI-OS,Tabs,4 tabs: Trading Engine / Mean Machine / Admin / Apps+,✅ DONE,Burgundy task card present
+2026-05-01,AI-OS,Kill Switch UI,AUTO / PAUSE / KILL buttons,🔴 PENDING,Admin tab — not built yet
+2026-05-01,AI-OS,Screener Wire,screener.py → dashboard live feed,🔴 PENDING,Needed for real-time display
+2026-05-01,AI-OS,Git Config,Update Git email placeholder → my.laboratory@outlook.com,🔴 PENDING,Placeholder still in repo
+2026-05-01,AI-OS,Agents,5 agents defined (Strategist/Analyst/Coder/Joker/Admin),✅ PLANNED,Not yet built — Phase 2
+2026-05-01,AI-OS,Voice I/O,Full voice input/output,🟡 PLANNED,Phase 2-3
+2026-05-01,AI-OS,YubiKey SSO,FIDO2 auth wired to dashboard,🟡 PLANNED,Phase 2-3
+2026-05-01,Mean Machine,Architecture,AI decision brain — defined under AI-OS,✅ PLANNED,Azure deploy TBD
+2026-05-01,Mean Machine,Deployment,Mean Machine Azure deploy,🔴 PENDING,Not started
+2026-05-01,Scripts/Infra,GameMode,GameMode.ps1 (Spectrum + GPU + VPN kill-switch),✅ DONE,C:\Scripts\
+2026-05-01,Scripts/Infra,TradeMode,TradeMode.ps1 (Z Fold isolated + VPN mandatory),✅ DONE,C:\Scripts\
+2026-05-01,Scripts/Infra,BF6Launcher,BF6Launcher.ps1 (ProtonVPN toggle + game launch),✅ DONE,C:\Scripts\
+2026-05-01,Security,Passkeys,Z Fold 6 passkey via Samsung Pass,✅ DONE,Added 2026-04-23
+2026-05-01,Security,YubiKeys,YubiKey Bio (desktop) + YubiKey 5C NFC (Z Fold),✅ DONE,Both active
+2026-05-01,Bitwarden,Cleanup,Change Bitwarden email + merge duplicate account,🔴 PENDING,Research merge path first

@@ -1,0 +1,19 @@
+Date,Category,Task,Status,Notes
+2026-04-28,Trading Engine V1,Verified bot is live on Azure,COMPLETE,Status 200 OK - Trading Engine V1 Running
+2026-04-28,Trading Engine V1,Fixed webhook token mismatch,COMPLETE,WEBHOOK_TOKEN vs WEBHOOK_SECRET_TOKEN - corrected
+2026-04-28,Trading Engine V1,Set env vars via Azure Portal,COMPLETE,WEBHOOK_SECRET_TOKEN + OANDA_ACCOUNT_ID + OANDA_ENV + OANDA_API_KEY all set
+2026-04-28,Trading Engine V1,Tested webhook signal,COMPLETE,Returns webhook received - token auth working
+2026-04-28,Trading Engine V1,Fired practice trade on OANDA,COMPLETE,EUR/USD LONG 16000 units executed successfully
+2026-04-28,Trading Engine V1,Closed all practice test positions,COMPLETE,One-click close on EUR/USD pair
+2026-04-28,Trading Engine V1,Restarted Azure container,COMPLETE,Clean restart - no errors
+2026-04-28,Trading Engine V1,Viewed live Azure log stream,COMPLETE,Bot idle and waiting for signals - healthy
+2026-04-28,TradingView,Updated webhook URL in alert,COMPLETE,Pointing to trading-engine-v1.azurewebsites.net/webhook
+2026-04-28,TradingView,Fixed token in alert message,COMPLETE,Changed 1234qwer to AlgoTradez2026SecureTX
+2026-04-28,TradingView,Alert active on EUR/USD 30m,COMPLETE,AlgoTradez Forex v2 Supertrend strategy
+2026-04-28,TradingView,Pine Script published publicly by mistake,RESOLVED,PineCoders warning received - script hidden/removed
+2026-04-28,AI-OS,Confirmed project hierarchy,COMPLETE,Trading Engine V1 = bot / Mean Machine = AI brain / Screener = tool only
+2026-04-28,AI-OS,Recorded M365 Copilot as future agent,COMPLETE,Phase 2-3 plan - $30/month license + Copilot Studio
+2026-04-28,AI-OS,Morning briefing 5-line format confirmed,COMPLETE,Drop 5 lines + CSV each morning to commence daily session
+2026-04-28,Memory,Recorded ALL CAPS rule,COMPLETE,Anything in caps gets recorded to memory immediately
+2026-04-28,Memory,Recorded typo interpretation rule,COMPLETE,Never judge typing - communicate at intelligence level
+2026-04-28,Memory,Recorded project hierarchy,COMPLETE,Trading Engine / Mean Machine / Screener defined

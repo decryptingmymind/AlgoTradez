@@ -1,0 +1,33 @@
+Phase,Module,Task,Description,Priority,Status,Dependencies,Start_Date,Target_Completion,Owner,Notes
+PHASE_1,Dashboard_UI,Build_Futuristic_UI,Create dark mode React dashboard with neon blue/green accents,Critical,In_Progress,None,2026-04-27,2026-05-04,Tony,Figma design reference needed
+PHASE_1,Dashboard_UI,Live_Trade_Feed,Display real-time trade execution log (ticker action qty price),High,Pending,Build_Futuristic_UI,2026-05-01,2026-05-08,Tony,WebSocket integration required
+PHASE_1,Dashboard_UI,AI_Decision_Log,Show Claude AI analysis and trade reasoning in real-time,High,Pending,Build_Futuristic_UI,2026-05-01,2026-05-08,Tony,Connect to Claude API
+PHASE_1,Dashboard_UI,System_Health_Monitor,Display bot status uptime alerts memory usage,Medium,Pending,Build_Futuristic_UI,2026-05-05,2026-05-10,Tony,Metrics from Trading Engine V1
+PHASE_1,Dashboard_UI,Multi_Window_Layout,Pop-up windows for alerts recommendations portfolio,High,Pending,Build_Futuristic_UI,2026-05-05,2026-05-12,Tony,Window manager library needed
+PHASE_1,Trading_Engine_V1,Webhook_Integration,Wire TradingView alerts to /webhook endpoint,Critical,Complete,None,2026-04-20,2026-04-27,Tony,trading-engine-v1.azurewebsites.net live
+PHASE_1,Trading_Engine_V1,Set_Env_Variables,Configure WEBHOOK_SECRET_TOKEN in Azure App Settings,High,Pending,Webhook_Integration,2026-04-27,2026-04-28,Tony,Security critical
+PHASE_1,Trading_Engine_V1,Test_TradingView_Alert,Send test alert from TradingView to webhook,High,Pending,Webhook_Integration,2026-04-28,2026-04-29,Tony,Verify end-to-end signal flow
+PHASE_2,Claude_API_Backend,Integration_Setup,Wire Claude API for trade analysis and decision-making,Critical,Pending,PHASE_1_Complete,2026-05-08,2026-05-15,Tony,API key stored in Bitwarden
+PHASE_2,Claude_API_Backend,Trade_Analysis_Prompt,Build prompt template for market analysis risk assessment,High,Pending,Integration_Setup,2026-05-08,2026-05-12,Tony,Iterate with test trades
+PHASE_2,Claude_API_Backend,Real_Time_Streaming,Implement streaming responses from Claude for live updates,High,Pending,Integration_Setup,2026-05-10,2026-05-18,Tony,Low latency critical
+PHASE_2,Voice_Input,Web_Speech_API,Implement browser-based voice recognition,High,Pending,Build_Futuristic_UI,2026-05-12,2026-05-20,Tony,Fallback to text input
+PHASE_2,Voice_Input,Voice_Command_Parser,Parse voice commands map to bot actions,High,Pending,Web_Speech_API,2026-05-15,2026-05-22,Tony,NLU enhancement later
+PHASE_2,Voice_Input,Voice_Output,Text-to-speech responses from Claude AI,Medium,Pending,Voice_Command_Parser,2026-05-18,2026-05-25,Tony,Web Audio API
+PHASE_2,WebSocket_Updates,Real_Time_Feed,WebSocket connection from Trading Engine V1 to dashboard,Critical,Pending,Trading_Engine_V1,2026-05-10,2026-05-18,Tony,Live trade updates
+PHASE_2,WebSocket_Updates,Portfolio_Sync,Real-time portfolio balance and position tracking,High,Pending,Real_Time_Feed,2026-05-12,2026-05-20,Tony,Alpaca/Webull API polling
+PHASE_3,Alerts_System,Neon_Animation_Engine,Build animated alert pop-ups for trade execution,High,Pending,Multi_Window_Layout,2026-05-20,2026-05-28,Tony,Three.js or Framer Motion
+PHASE_3,Alerts_System,Trade_Execution_Visuals,Animated confirmation screens profit/loss displays,High,Pending,Neon_Animation_Engine,2026-05-22,2026-05-30,Tony,Real-time P&L updates
+PHASE_3,Alerts_System,Risk_Warning_System,Alert user of max drawdown position size violations,High,Pending,System_Health_Monitor,2026-05-20,2026-05-28,Tony,Color-coded severity levels
+PHASE_3,Portfolio_Visualization,Asset_Allocation,Pie chart real-time asset distribution,Medium,Pending,Portfolio_Sync,2026-05-25,2026-06-02,Tony,Recharts library
+PHASE_3,Portfolio_Visualization,P&L_Chart,Line chart daily weekly monthly profit/loss,Medium,Pending,Portfolio_Sync,2026-05-25,2026-06-02,Tony,Interactive zoom
+PHASE_3,Integration_Testing,End_To_End_Test,Voice command → Claude decision → Trade execution → Visual feedback,Critical,Pending,PHASE_2_Complete,2026-05-30,2026-06-08,Tony,Paper trading only
+PHASE_3,Integration_Testing,Performance_Tuning,Latency optimization live deployment readiness,High,Pending,End_To_End_Test,2026-06-02,2026-06-10,Tony,Target <200ms response
+INFRASTRUCTURE,Azure_Deployment,App_Service_Optimization,Upgrade plan scale as needed for load,Medium,Pending,Trading_Engine_V1,2026-05-15,2026-05-22,Tony,Monitor CPU memory usage
+INFRASTRUCTURE,Database,Trade_Log_Storage,Persistent database for trade history audit trail,Medium,Pending,Real_Time_Feed,2026-05-20,2026-05-28,Tony,Azure SQL or MongoDB
+INFRASTRUCTURE,Authentication,User_Login_System,Secure login with YubiKey FIDO2 support,High,Pending,Build_Futuristic_UI,2026-06-01,2026-06-10,Tony,Biometric + hardware key
+INFRASTRUCTURE,Monitoring,Logging_Dashboard,Centralized log viewing error tracking,Medium,Pending,Real_Time_Feed,2026-05-25,2026-06-05,Tony,ELK Stack or Azure Monitor
+LONG_TERM,AI_OS_Vision,Voice_Autonomy,Fully voice-controlled autonomous trading system,Critical,Concept,PHASE_3_Complete,2026-06-15,2026-08-01,Tony,5 personality agents architecture
+LONG_TERM,AI_OS_Vision,Agent_Orchestra,Deploy 5 Claude personality agents (Strategist Analyst Joker Delegator Assistant),High,Concept,Voice_Autonomy,2026-07-01,2026-08-15,Tony,Inter-agent communication via Redis
+LONG_TERM,AI_OS_Vision,Celebratory_Effects,Trade win animations sound effects celebrations,Low,Concept,Neon_Animation_Engine,2026-07-15,2026-08-20,Tony,Fun factor for user engagement
+LONG_TERM,Expansion,Multi_Broker_Support,Alpaca Webull Interactive Brokers support,Medium,Concept,Trading_Engine_V1,2026-07-01,2026-08-30,Tony,Abstract broker interface
+LONG_TERM,Expansion,Crypto_Trading,Add Coinbase integration for crypto trading,Medium,Concept,Multi_Broker_Support,2026-07-15,2026-09-15,Tony,Separate bot instance
