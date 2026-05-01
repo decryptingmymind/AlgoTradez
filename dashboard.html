@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -218,7 +218,7 @@ body{font-family:'Share Tech Mono',monospace;background:var(--bg);color:var(--g)
 <div class="header">
   <div>
     <div class="logo-text">ALGO TRADEZ // AI-OS</div>
-    <div class="logo-sub">MAMA NODE · AUTONOMOUS FINANCIAL OS</div>
+    <div class="logo-sub">MAMA NODE Â· AUTONOMOUS FINANCIAL OS</div>
   </div>
   <div class="header-right">
     <div id="engine-status" class="online"><div class="dot"></div>SYSTEMS ONLINE</div>
@@ -237,7 +237,7 @@ body{font-family:'Share Tech Mono',monospace;background:var(--bg);color:var(--g)
 
 <div class="body">
 
-  <!-- ═══════════════ COMMAND TAB ═══════════════ -->
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• COMMAND TAB â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
   <div id="tab-command" class="tab-content active" style="flex:1;overflow:hidden;display:flex;">
     <div class="main">
 
@@ -273,8 +273,8 @@ body{font-family:'Share Tech Mono',monospace;background:var(--bg);color:var(--g)
           <span style="margin-left:auto;font-size:10px;font-family:'Rajdhani',sans-serif;color:var(--g);font-weight:700;" id="cv-price">---</span>
           <span style="font-size:8px;margin-left:8px;" id="cv-change"></span>
           <button class="chart-btn" onclick="CV.zoomIn()" title="Zoom In">+</button>
-          <button class="chart-btn" onclick="CV.zoomOut()" title="Zoom Out">−</button>
-          <button class="chart-btn" onclick="CV.resetZoom()" title="Reset">⊡</button>
+          <button class="chart-btn" onclick="CV.zoomOut()" title="Zoom Out">âˆ’</button>
+          <button class="chart-btn" onclick="CV.resetZoom()" title="Reset">âŠ¡</button>
         </div>
         <!-- Main Price Canvas -->
         <div style="position:relative;flex:3;min-height:220px;overflow:hidden;cursor:crosshair;" id="cv-main-wrap">
@@ -304,13 +304,13 @@ body{font-family:'Share Tech Mono',monospace;background:var(--bg);color:var(--g)
 
       <div class="panel">
         <div class="panel-hdr">
-          <div class="panel-title">// SCREENER · ALL PAIRS · SUPERTREND ENGINE</div>
+          <div class="panel-title">// SCREENER Â· ALL PAIRS Â· SUPERTREND ENGINE</div>
           <div class="badge live" id="screener-badge">LIVE</div>
         </div>
         <table class="stbl" style="width:100%;">
           <thead>
             <tr>
-              <th>PAIR</th><th>DIR</th><th>SCORE</th><th>ST·M30</th><th>ST·M45</th>
+              <th>PAIR</th><th>DIR</th><th>SCORE</th><th>STÂ·M30</th><th>STÂ·M45</th>
               <th>RSI</th><th>EMA20</th><th>VWAP</th><th>PRICE</th><th>UPDATED</th>
             </tr>
           </thead>
@@ -353,7 +353,7 @@ body{font-family:'Share Tech Mono',monospace;background:var(--bg);color:var(--g)
       <div class="ai-log">
         <div class="side-label">// AI DECISION LOG</div>
         <div id="ai-log-entries">
-          <div class="ai-entry"><span class="ts">09:14 </span><span class="hl">SIGNAL</span><span class="msg"> EUR/USD breakout — long</span></div>
+          <div class="ai-entry"><span class="ts">09:14 </span><span class="hl">SIGNAL</span><span class="msg"> EUR/USD breakout â€” long</span></div>
           <div class="ai-entry"><span class="ts">09:01 </span><span class="msg">VWAP reclaim. Confluence: </span><span class="hl">4/6</span></div>
           <div class="ai-entry"><span class="ts">08:45 </span><span class="msg">Supertrend bullish M30+M45</span></div>
           <div class="ai-entry"><span class="ts">08:30 </span><span class="msg">System init. Webhook </span><span class="hl">ACTIVE</span></div>
@@ -361,19 +361,19 @@ body{font-family:'Share Tech Mono',monospace;background:var(--bg);color:var(--g)
       </div>
       <div class="task-card">
         <div class="task-title">// TASK PROGRESS</div>
-        <div class="task-item done"><div class="check done">✓</div>Webhook live on Azure</div>
-        <div class="task-item done"><div class="check done">✓</div>Supertrend engine built</div>
-        <div class="task-item active"><div class="check"></div>Wire screener → dashboard</div>
+        <div class="task-item done"><div class="check done">âœ“</div>Webhook live on Azure</div>
+        <div class="task-item done"><div class="check done">âœ“</div>Supertrend engine built</div>
+        <div class="task-item active"><div class="check"></div>Wire screener â†’ dashboard</div>
         <div class="task-item"><div class="check"></div>Kill switch AUTO/PAUSE/KILL</div>
         <div class="task-item"><div class="check"></div>Mean Machine brain</div>
       </div>
     </div>
   </div>
 
-  <!-- ═══════════════ INTEL TAB ═══════════════ -->
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• INTEL TAB â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
   <div id="tab-intel" class="tab-content" style="flex:1;overflow:hidden;display:none;">
     <div class="main">
-      <div class="slabel">// MARKET INTEL · SUPERTREND STATUS · ALL PAIRS</div>
+      <div class="slabel">// MARKET INTEL Â· SUPERTREND STATUS Â· ALL PAIRS</div>
       <div class="intel-grid" id="intel-grid">
         <!-- Populated by JS -->
         <div class="intel-pair"><div class="intel-pair-hdr"><span class="intel-pair-name">EUR/USD</span><span class="intel-pair-dir flat">FLAT</span></div><div class="intel-row"><span class="lbl">PRICE</span><span class="val">---</span></div><div class="intel-row"><span class="lbl">ST M30</span><span class="val">---</span></div><div class="intel-row"><span class="lbl">ST M45</span><span class="val">---</span></div><div class="intel-row"><span class="lbl">RSI</span><span class="val">---</span></div><div class="intel-row"><span class="lbl">EMA20</span><span class="val">---</span></div><div class="intel-row"><span class="lbl">VWAP</span><span class="val">---</span></div><div class="intel-row"><span class="lbl">SCORE</span><span class="val">---</span></div></div>
@@ -383,7 +383,7 @@ body{font-family:'Share Tech Mono',monospace;background:var(--bg);color:var(--g)
         <div class="intel-pair"><div class="intel-pair-hdr"><span class="intel-pair-name">USD/CAD</span><span class="intel-pair-dir flat">FLAT</span></div><div class="intel-row"><span class="lbl">PRICE</span><span class="val">---</span></div><div class="intel-row"><span class="lbl">ST M30</span><span class="val">---</span></div><div class="intel-row"><span class="lbl">ST M45</span><span class="val">---</span></div><div class="intel-row"><span class="lbl">RSI</span><span class="val">---</span></div><div class="intel-row"><span class="lbl">EMA20</span><span class="val">---</span></div><div class="intel-row"><span class="lbl">VWAP</span><span class="val">---</span></div><div class="intel-row"><span class="lbl">SCORE</span><span class="val">---</span></div></div>
       </div>
       <div class="panel">
-        <div class="panel-hdr"><div class="panel-title">// AI NOTES CONTEXT · MEAN MACHINE INPUT</div></div>
+        <div class="panel-hdr"><div class="panel-title">// AI NOTES CONTEXT Â· MEAN MACHINE INPUT</div></div>
         <div id="intel-notes" style="padding:10px 12px;font-size:9px;color:#00aa00;min-height:60px;">No notes shared yet. Add notes in NOTES tab and tag as INTEL.</div>
       </div>
     </div>
@@ -398,45 +398,45 @@ body{font-family:'Share Tech Mono',monospace;background:var(--bg);color:var(--g)
       <div class="ai-log">
         <div class="side-label">// MEAN MACHINE STATUS</div>
         <div class="ai-entry"><span class="hl">STATUS </span><span class="msg">Building phase</span></div>
-        <div class="ai-entry"><span class="hl">RAG </span><span class="msg">Pinecone · planned</span></div>
+        <div class="ai-entry"><span class="hl">RAG </span><span class="msg">Pinecone Â· planned</span></div>
         <div class="ai-entry"><span class="hl">VOICE </span><span class="msg">Phase 2</span></div>
         <div class="ai-entry"><span class="hl">NOTES </span><span class="msg">Wire pending</span></div>
       </div>
     </div>
   </div>
 
-  <!-- ═══════════════ ENGINE TAB ═══════════════ -->
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• ENGINE TAB â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
   <div id="tab-engine" class="tab-content" style="flex:1;overflow:hidden;display:none;">
     <div class="main">
-      <div class="slabel">// TRADING ENGINE V1 · HEALTH & STATUS</div>
+      <div class="slabel">// TRADING ENGINE V1 Â· HEALTH & STATUS</div>
       <div class="metrics col4">
         <div class="metric"><div class="metric-label">ENGINE</div><div class="metric-val" id="eng-status">LIVE</div><div class="metric-sub">trading-engine-v1</div></div>
-        <div class="metric"><div class="metric-label">RUNTIME</div><div class="metric-val warn">Python</div><div class="metric-sub">3.11 · Linux B1</div></div>
-        <div class="metric"><div class="metric-label">WEBHOOK</div><div class="metric-val" id="eng-webhook">ACTIVE</div><div class="metric-sub">/webhook · POST</div></div>
+        <div class="metric"><div class="metric-label">RUNTIME</div><div class="metric-val warn">Python</div><div class="metric-sub">3.11 Â· Linux B1</div></div>
+        <div class="metric"><div class="metric-label">WEBHOOK</div><div class="metric-val" id="eng-webhook">ACTIVE</div><div class="metric-sub">/webhook Â· POST</div></div>
         <div class="metric"><div class="metric-label">OANDA</div><div class="metric-val warn">PRACTICE</div><div class="metric-sub">101-001-38382514-001</div></div>
       </div>
       <div class="panel">
         <div class="panel-hdr"><div class="panel-title">// SYSTEM HEALTH</div></div>
         <div class="health-row"><span class="hlbl">AZURE URL</span><span class="hval ok">trading-engine-v1.azurewebsites.net</span></div>
-        <div class="health-row"><span class="hlbl">APP SERVICE PLAN</span><span class="hval ok">my.laboratory_asp_6758 · B1</span></div>
+        <div class="health-row"><span class="hlbl">APP SERVICE PLAN</span><span class="hval ok">my.laboratory_asp_6758 Â· B1</span></div>
         <div class="health-row"><span class="hlbl">RESOURCE GROUP</span><span class="hval ok">TradingEngineV1-RG</span></div>
         <div class="health-row"><span class="hlbl">LOCATION</span><span class="hval ok">Canada Central</span></div>
         <div class="health-row"><span class="hlbl">SCREENER INTERVAL</span><span class="hval ok">Every 5 minutes</span></div>
-        <div class="health-row"><span class="hlbl">PAIRS MONITORED</span><span class="hval ok">EUR/USD · GBP/USD · USD/JPY · AUD/USD · USD/CAD</span></div>
-        <div class="health-row"><span class="hlbl">TIMEFRAMES</span><span class="hval ok">M30 · M45</span></div>
+        <div class="health-row"><span class="hlbl">PAIRS MONITORED</span><span class="hval ok">EUR/USD Â· GBP/USD Â· USD/JPY Â· AUD/USD Â· USD/CAD</span></div>
+        <div class="health-row"><span class="hlbl">TIMEFRAMES</span><span class="hval ok">M30 Â· M45</span></div>
         <div class="health-row"><span class="hlbl">CONFLUENCE THRESHOLD</span><span class="hval ok">4/6 points</span></div>
         <div class="health-row"><span class="hlbl">WEBHOOK TOKEN</span><span class="hval warn">AlgoTradez2026SecureTX</span></div>
         <div class="health-row"><span class="hlbl">LAST DEPLOY</span><span class="hval ok" id="eng-deploy">Apr 30 2026</span></div>
       </div>
       <div class="panel">
-        <div class="panel-hdr"><div class="panel-title">// SCREENER ALGO · ACTIVE INDICATORS</div></div>
-        <div class="health-row"><span class="hlbl">SUPERTREND M30</span><span class="hval ok">ATR 10 · Multiplier 2.0</span></div>
-        <div class="health-row"><span class="hlbl">SUPERTREND M45</span><span class="hval ok">ATR 10 · Multiplier 3.0</span></div>
-        <div class="health-row"><span class="hlbl">RSI</span><span class="hval ok">Period 14 · BUY &lt;45 · SELL &gt;55</span></div>
-        <div class="health-row"><span class="hlbl">EMA</span><span class="hval ok">EMA20 · EMA50 crossover</span></div>
+        <div class="panel-hdr"><div class="panel-title">// SCREENER ALGO Â· ACTIVE INDICATORS</div></div>
+        <div class="health-row"><span class="hlbl">SUPERTREND M30</span><span class="hval ok">ATR 10 Â· Multiplier 2.0</span></div>
+        <div class="health-row"><span class="hlbl">SUPERTREND M45</span><span class="hval ok">ATR 10 Â· Multiplier 3.0</span></div>
+        <div class="health-row"><span class="hlbl">RSI</span><span class="hval ok">Period 14 Â· BUY &lt;45 Â· SELL &gt;55</span></div>
+        <div class="health-row"><span class="hlbl">EMA</span><span class="hval ok">EMA20 Â· EMA50 crossover</span></div>
         <div class="health-row"><span class="hlbl">VWAP</span><span class="hval ok">Price vs VWAP bias</span></div>
         <div class="health-row"><span class="hlbl">MOMENTUM</span><span class="hval ok">3-candle close delta</span></div>
-        <div class="health-row"><span class="hlbl">NO-TRADE ZONE</span><span class="hval ok">Flat ST &lt;1 flip/5 candles → skip</span></div>
+        <div class="health-row"><span class="hlbl">NO-TRADE ZONE</span><span class="hval ok">Flat ST &lt;1 flip/5 candles â†’ skip</span></div>
       </div>
     </div>
     <div class="side">
@@ -457,20 +457,20 @@ body{font-family:'Share Tech Mono',monospace;background:var(--bg);color:var(--g)
     </div>
   </div>
 
-  <!-- ═══════════════ SYSTEMS TAB ═══════════════ -->
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• SYSTEMS TAB â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
   <div id="tab-systems" class="tab-content" style="flex:1;overflow:hidden;display:none;">
     <div class="main">
-      <div class="slabel">// SYSTEM CONTROLS · SECURITY · INFRASTRUCTURE</div>
+      <div class="slabel">// SYSTEM CONTROLS Â· SECURITY Â· INFRASTRUCTURE</div>
 
       <div class="panel">
-        <div class="panel-hdr"><div class="panel-title">// KILL SWITCH · TRADING ENGINE CONTROL</div><div id="mode-badge" class="badge">AUTO</div></div>
+        <div class="panel-hdr"><div class="panel-title">// KILL SWITCH Â· TRADING ENGINE CONTROL</div><div id="mode-badge" class="badge">AUTO</div></div>
         <div class="kill-row">
-          <button class="kbtn auto active" id="btn-auto" onclick="setMode('AUTO')">⚡ AUTO</button>
-          <button class="kbtn pause" id="btn-pause" onclick="setMode('PAUSE')">⏸ PAUSE</button>
-          <button class="kbtn kill" id="btn-kill" onclick="setMode('KILL')">☠ KILL</button>
+          <button class="kbtn auto active" id="btn-auto" onclick="setMode('AUTO')">âš¡ AUTO</button>
+          <button class="kbtn pause" id="btn-pause" onclick="setMode('PAUSE')">â¸ PAUSE</button>
+          <button class="kbtn kill" id="btn-kill" onclick="setMode('KILL')">â˜  KILL</button>
         </div>
         <div style="padding:0 12px 10px;font-size:8px;color:#00aa00;">
-          AUTO = engine runs normally · PAUSE = holds new signals · KILL = halts all trading immediately
+          AUTO = engine runs normally Â· PAUSE = holds new signals Â· KILL = halts all trading immediately
         </div>
         <div class="health-row"><span class="hlbl">CURRENT MODE</span><span class="hval ok" id="mode-display">AUTO</span></div>
         <div class="health-row"><span class="hlbl">MODE CHANGED</span><span class="hval" id="mode-time">--:--:--</span></div>
@@ -480,19 +480,19 @@ body{font-family:'Share Tech Mono',monospace;background:var(--bg);color:var(--g)
         <div class="panel-hdr"><div class="panel-title">// AZURE INFRASTRUCTURE</div></div>
         <div class="health-row"><span class="hlbl">AI-OS DASHBOARD</span><span class="hval ok">algotradez-aios.azurewebsites.net</span></div>
         <div class="health-row"><span class="hlbl">TRADING ENGINE</span><span class="hval ok">trading-engine-v1.azurewebsites.net</span></div>
-        <div class="health-row"><span class="hlbl">APP SERVICE PLAN</span><span class="hval ok">asp_6758 · B1 · Linux · ~$13/mo</span></div>
-        <div class="health-row"><span class="hlbl">AIOS PLAN</span><span class="hval ok">asp_6759 · F1 · Windows</span></div>
-        <div class="health-row"><span class="hlbl">CREDIT REMAINING</span><span class="hval warn">$198.65 · Expires May 21 2026</span></div>
+        <div class="health-row"><span class="hlbl">APP SERVICE PLAN</span><span class="hval ok">asp_6758 Â· B1 Â· Linux Â· ~$13/mo</span></div>
+        <div class="health-row"><span class="hlbl">AIOS PLAN</span><span class="hval ok">asp_6759 Â· F1 Â· Windows</span></div>
+        <div class="health-row"><span class="hlbl">CREDIT REMAINING</span><span class="hval warn">$198.65 Â· Expires May 21 2026</span></div>
         <div class="health-row"><span class="hlbl">MONTHLY BURN</span><span class="hval ok">~$26/mo</span></div>
         <div class="health-row"><span class="hlbl">RUNWAY</span><span class="hval warn">~7.5 months</span></div>
       </div>
 
       <div class="panel">
-        <div class="panel-hdr"><div class="panel-title">// SECURITY · AUTHENTICATION</div></div>
-        <div class="health-row"><span class="hlbl">BITWARDEN</span><span class="hval ok">Desktop + Extension · ACTIVE</span></div>
-        <div class="health-row"><span class="hlbl">YUBIKEY 1</span><span class="hval ok">Bio Series · USB-A · NFC · Omen Desktop</span></div>
-        <div class="health-row"><span class="hlbl">YUBIKEY 2</span><span class="hval ok">5C NFC · USB-C · Z Fold 6</span></div>
-        <div class="health-row"><span class="hlbl">PROTONVPN</span><span class="hval ok">Kill-switch ON · Always-on TradeMode</span></div>
+        <div class="panel-hdr"><div class="panel-title">// SECURITY Â· AUTHENTICATION</div></div>
+        <div class="health-row"><span class="hlbl">BITWARDEN</span><span class="hval ok">Desktop + Extension Â· ACTIVE</span></div>
+        <div class="health-row"><span class="hlbl">YUBIKEY 1</span><span class="hval ok">Bio Series Â· USB-A Â· NFC Â· Omen Desktop</span></div>
+        <div class="health-row"><span class="hlbl">YUBIKEY 2</span><span class="hval ok">5C NFC Â· USB-C Â· Z Fold 6</span></div>
+        <div class="health-row"><span class="hlbl">PROTONVPN</span><span class="hval ok">Kill-switch ON Â· Always-on TradeMode</span></div>
         <div class="health-row"><span class="hlbl">PASSKEYS</span><span class="hval ok">Samsung Pass + MS Password Manager</span></div>
         <div class="health-row"><span class="hlbl">FIDO2</span><span class="hval ok">Both YubiKeys registered</span></div>
       </div>
@@ -509,83 +509,19 @@ body{font-family:'Share Tech Mono',monospace;background:var(--bg);color:var(--g)
         <div class="ai-entry"><span class="hl">SEC </span><span class="msg">YubiKey auth active</span></div>
         <div class="ai-entry"><span class="hl">VPN </span><span class="msg">Kill-switch enforced</span></div>
         <div class="ai-entry"><span class="hl">AZ </span><span class="msg">Credit expires May 21</span></div>
-        <div class="ai-entry"><span class="hl">MODE </span><span class="msg">AUTO · Engine running</span></div>
+        <div class="ai-entry"><span class="hl">MODE </span><span class="msg">AUTO Â· Engine running</span></div>
       </div>
     </div>
   </div>
 
-  <!-- ═══════════════ APPS TAB ═══════════════ -->
-  <div id="tab-apps" class="tab-content" style="flex:1;overflow:hidden;display:none;">
-    <div class="main">
-      <div class="slabel">// APPS · TOOLS · PLATFORMS</div>
-      <div class="apps-grid">
-        <a class="app-tile" href="https://tradingview.com" target="_blank"><div class="app-icon">📈</div><div class="app-name">TRADINGVIEW</div><div class="app-url">tradingview.com</div></a>
-        <a class="app-tile" href="https://oanda.com" target="_blank"><div class="app-icon">💹</div><div class="app-name">OANDA</div><div class="app-url">practice account</div></a>
-        <a class="app-tile" href="https://traderspost.io" target="_blank"><div class="app-icon">🔗</div><div class="app-name">TRADERSPOST</div><div class="app-url">traderspost.io</div></a>
-        <a class="app-tile" href="https://webull.com" target="_blank"><div class="app-icon">📊</div><div class="app-name">WEBULL</div><div class="app-url">primary broker · long</div></a>
-        <a class="app-tile" href="https://coinbase.com" target="_blank"><div class="app-icon">₿</div><div class="app-name">COINBASE</div><div class="app-url">coinbase.com</div></a>
-        <a class="app-tile" href="https://portal.azure.com" target="_blank"><div class="app-icon">☁</div><div class="app-name">AZURE PORTAL</div><div class="app-url">portal.azure.com</div></a>
-        <a class="app-tile" href="https://github.com/ai-rtony91" target="_blank"><div class="app-icon">🐙</div><div class="app-name">GITHUB</div><div class="app-url">ai-rtony91</div></a>
-        <a class="app-tile" href="https://protonvpn.com" target="_blank"><div class="app-icon">🛡</div><div class="app-name">PROTONVPN</div><div class="app-url">kill-switch ON</div></a>
-        <a class="app-tile" href="https://bitwarden.com" target="_blank"><div class="app-icon">🔐</div><div class="app-name">BITWARDEN</div><div class="app-url">vault · desktop app</div></a>
-        <a class="app-tile" href="https://trading-engine-v1.azurewebsites.net" target="_blank"><div class="app-icon">⚙</div><div class="app-name">TRADING ENGINE</div><div class="app-url">trading-engine-v1</div></a>
-        <a class="app-tile" href="https://algotradez-aios.azurewebsites.net" target="_blank"><div class="app-icon">🧠</div><div class="app-name">AI-OS DASHBOARD</div><div class="app-url">algotradez-aios</div></a>
-        <a class="app-tile" href="https://code.visualstudio.com" target="_blank"><div class="app-icon">💻</div><div class="app-name">VS CODE</div><div class="app-url">+ GitHub Copilot</div></a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ═══════════════ NOTES TAB ═══════════════ -->
-  <div id="tab-notes" class="tab-content" style="flex:1;overflow:hidden;display:none;">
-    <div class="main">
-      <div class="slabel">// NOTES · SHARED WITH MEAN MACHINE + INTEL</div>
-      <div class="panel" style="flex:1;display:flex;flex-direction:column;">
-        <div class="panel-hdr">
-          <div class="panel-title">// NEW NOTE</div>
-          <div class="badge">PUSH TO AI BRAIN</div>
-        </div>
-        <div class="notes-area">
-          <textarea class="note-input" id="note-input" rows="4" placeholder="Write your market note, observation, or trade idea...&#10;&#10;e.g. EUR/USD looking weak ahead of 2PM news. VWAP rejection at 1.0850."></textarea>
-          <div class="note-meta">
-            <span class="note-tag active" id="tag-intel" onclick="toggleTag('intel')">INTEL</span>
-            <span class="note-tag" id="tag-trade" onclick="toggleTag('trade')">TRADE</span>
-            <span class="note-tag" id="tag-risk" onclick="toggleTag('risk')">RISK</span>
-            <span class="note-tag" id="tag-idea" onclick="toggleTag('idea')">IDEA</span>
-            <button class="note-btn" onclick="saveNote()">SAVE + PUSH →</button>
-          </div>
-          <div class="slabel" style="margin-top:4px;">// SAVED NOTES</div>
-          <div class="note-list" id="note-list">
-            <div style="font-size:8px;color:#00aa00;padding:8px;">No notes yet. Write above and push to AI brain.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="side">
-      <div class="side-section">
-        <div class="side-label">// NOTE STATS</div>
-        <div class="health-row"><span class="hlbl">TOTAL NOTES</span><span class="hval" id="note-count">0</span></div>
-        <div class="health-row"><span class="hlbl">INTEL TAGGED</span><span class="hval" id="note-intel-count">0</span></div>
-        <div class="health-row"><span class="hlbl">PUSHED TO AI</span><span class="hval warn" id="note-pushed">0</span></div>
-      </div>
-      <div class="ai-log">
-        <div class="side-label">// AI BRAIN STATUS</div>
-        <div class="ai-entry"><span class="hl">MEAN MACHINE </span><span class="msg">Build phase</span></div>
-        <div class="ai-entry"><span class="hl">RAG </span><span class="msg">Pinecone · planned</span></div>
-        <div class="ai-entry"><span class="hl">NOTES → </span><span class="msg">Intel feed · wired</span></div>
-        <div class="ai-entry"><span class="hl">VOICE </span><span class="msg">Phase 2 target</span></div>
-      </div>
-    </div>
-  </div>
-
-</div><!-- end body -->
-
-<script>
-// ── Clock ──────────────────────────────────────
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• APPS TAB â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <div id="tab-apps" class="tab-content" style="flex:1;overflow:hidden;display:none;"><div class="main"><div class="slabel">// APPS + TOOLS + PLATFORMS</div><div class="apps-grid"><a class="app-tile" href="https://tradingview.com" target="_blank"><div class="app-icon">TV</div><div class="app-name">TRADINGVIEW</div><div class="app-url">tradingview.com</div></a><a class="app-tile" href="https://oanda.com" target="_blank"><div class="app-icon">OA</div><div class="app-name">OANDA</div><div class="app-url">practice account</div></a><a class="app-tile" href="https://traderspost.io" target="_blank"><div class="app-icon">TP</div><div class="app-name">TRADERSPOST</div><div class="app-url">traderspost.io</div></a><a class="app-tile" href="https://webull.com" target="_blank"><div class="app-icon">WB</div><div class="app-name">WEBULL</div><div class="app-url">primary broker</div></a><a class="app-tile" href="https://coinbase.com" target="_blank"><div class="app-icon">CB</div><div class="app-name">COINBASE</div><div class="app-url">coinbase.com</div></a><a class="app-tile" href="https://portal.azure.com" target="_blank"><div class="app-icon">AZ</div><div class="app-name">AZURE PORTAL</div><div class="app-url">portal.azure.com</div></a><a class="app-tile" href="https://github.com/ai-rtony91" target="_blank"><div class="app-icon">GH</div><div class="app-name">GITHUB</div><div class="app-url">ai-rtony91</div></a><a class="app-tile" href="https://protonvpn.com" target="_blank"><div class="app-icon">VP</div><div class="app-name">PROTONVPN</div><div class="app-url">kill-switch ON</div></a><a class="app-tile" href="https://bitwarden.com" target="_blank"><div class="app-icon">BW</div><div class="app-name">BITWARDEN</div><div class="app-url">bitwarden.com</div></a></div></div></div><script>
+// â”€â”€ Clock â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function pad(n){return String(n).padStart(2,'0');}
 function tick(){var d=new Date();document.getElementById('clock').textContent=pad(d.getHours())+':'+pad(d.getMinutes())+':'+pad(d.getSeconds());}
 tick();setInterval(tick,1000);
 
-// ── Tab switching ──────────────────────────────
+// â”€â”€ Tab switching â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function switchTab(el,id){
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
   el.classList.add('active');
@@ -594,7 +530,7 @@ function switchTab(el,id){
   tc.style.display='flex';tc.classList.add('active');
 }
 
-// ── Kill Switch ────────────────────────────────
+// â”€â”€ Kill Switch â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 var currentMode='AUTO';
 function setMode(m){
   currentMode=m;
@@ -609,7 +545,7 @@ function setMode(m){
   pushAILog('MODE','Engine set to '+m);
 }
 
-// ── AI Log ─────────────────────────────────────
+// â”€â”€ AI Log â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function pushAILog(tag,msg){
   var d=new Date();
   var ts=pad(d.getHours())+':'+pad(d.getMinutes());
@@ -621,7 +557,7 @@ function pushAILog(tag,msg){
   if(el.children.length>20)el.removeChild(el.lastChild);
 }
 
-// ── Screener Push Handler ──────────────────────
+// â”€â”€ Screener Push Handler â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 // Called when trading engine pushes screener data
 function updateScreener(data){
   // data = array of pair results from screener.py
@@ -685,7 +621,7 @@ function updateIntelPair(r){
   }
 }
 
-// ── Notes ──────────────────────────────────────
+// â”€â”€ Notes â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 var notes=[];
 var activeTags=['intel'];
 function toggleTag(t){
@@ -713,7 +649,7 @@ function saveNote(){
       intel.appendChild(div);
     });
   }
-  pushAILog('NOTE','New note pushed → '+note.tags.join(','));
+  pushAILog('NOTE','New note pushed â†’ '+note.tags.join(','));
   updateNoteStats();
 }
 function renderNotes(){
@@ -733,12 +669,12 @@ function updateNoteStats(){
   document.getElementById('note-pushed').textContent=notes.length;
 }
 
-// ── Expose for trading engine push ─────────────
+// â”€â”€ Expose for trading engine push â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 window.AIOS={updateScreener:updateScreener,pushAILog:pushAILog};
 
-// ══════════════════════════════════════════════
-// CV — FULL CHART ENGINE (TradingView-style)
-// ══════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// CV â€” FULL CHART ENGINE (TradingView-style)
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 var CV=(function(){
   var S={
     pair:'EUR_USD',tf:'M15',
@@ -757,7 +693,7 @@ var CV=(function(){
 
   var TF_MAP={M15:'M15',M30:'M30',M45:'M45',H1:'H1'};
 
-  // ── Helpers ───────────────────────────────────
+  // â”€â”€ Helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   function getCanvas(id){return document.getElementById(id);}
   function resize(c,w){
     c.width=w;c.height=c.offsetHeight;
@@ -765,7 +701,7 @@ var CV=(function(){
     return{w:w,h:c.offsetHeight};
   }
 
-  // ── Indicators ────────────────────────────────
+  // â”€â”€ Indicators â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   function calcEMA(arr,p){
     if(arr.length<p)return[];
     var k=2/(p+1),res=[];
@@ -836,7 +772,7 @@ var CV=(function(){
     return{line,dir};
   }
 
-  // ── Drawing utilities ─────────────────────────
+  // â”€â”€ Drawing utilities â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   function drawGrid(ctx,W,H,minV,maxV,steps,fmt,yAxisW){
     ctx.strokeStyle='#002800';ctx.lineWidth=0.5;ctx.setLineDash([2,6]);
     ctx.font='7px Share Tech Mono,monospace';ctx.fillStyle='#005500';
@@ -857,7 +793,7 @@ var CV=(function(){
     }
   }
 
-  // ── Main render ───────────────────────────────
+  // â”€â”€ Main render â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   function render(){
     var candles=S.candles;
     if(!candles.length)return;
@@ -882,7 +818,7 @@ var CV=(function(){
     var macdData=calcMACD(closes,12,26,9);
     var st=calcSupertrend(candles,10,3.0);
 
-    // ─ Main price canvas ─
+    // â”€ Main price canvas â”€
     var mc=getCanvas('cv-main');
     var myc=getCanvas('cv-yaxis');
     if(!mc||!myc)return;
@@ -987,7 +923,7 @@ var CV=(function(){
       yctx.fillText(gv.toFixed(5),2,g/4*MH+4);
     }
 
-    // ─ RSI ─
+    // â”€ RSI â”€
     renderSubPanel('cv-rsi','cv-rsi-yaxis',rsi,start,end,chartW,0,100,
       v=>v==null?null:v,
       function(ctx,W,H,arr,s,e){
@@ -1005,7 +941,7 @@ var CV=(function(){
       },'RSI',2
     );
 
-    // ─ MACD ─
+    // â”€ MACD â”€
     var allMacd=[...macdData.macd,...macdData.hist].filter(v=>v!=null);
     var macdMax=Math.max(...allMacd.map(Math.abs))||0.001;
     renderSubPanel('cv-macd','cv-macd-yaxis',macdData.macd,start,end,chartW,-macdMax,macdMax,
@@ -1034,7 +970,7 @@ var CV=(function(){
       },'MACD',6
     );
 
-    // ─ X Axis ─
+    // â”€ X Axis â”€
     var xc=getCanvas('cv-xaxis');
     if(xc){
       xc.style.width=(chartW+S.YAXIS_W)+'px';xc.style.height='18px';
@@ -1073,7 +1009,7 @@ var CV=(function(){
     if(arr[end-1]!=null)yctx.fillText(arr[end-1].toFixed(decimals),2,H/2+4);
   }
 
-  // ── Demo data ────────────────────────────────
+  // â”€â”€ Demo data â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   function genDemo(){
     var out=[];var p=1.0840;var now=Date.now();
     for(var i=0;i<120;i++){
@@ -1089,7 +1025,7 @@ var CV=(function(){
     return out.reverse();
   }
 
-  // ── Fetch from OANDA ─────────────────────────
+  // â”€â”€ Fetch from OANDA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   function fetch_candles(){
     var key=window._oandaKey||'';
     var gran=TF_MAP[S.tf]||'M15';
@@ -1108,7 +1044,7 @@ var CV=(function(){
       }).catch(()=>{S.candles=genDemo();render();});
   }
 
-  // ── Mouse events ─────────────────────────────
+  // â”€â”€ Mouse events â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   function initMouse(){
     // Retry until DOM ready
     var wrap=document.getElementById('cv-main-wrap');
@@ -1189,7 +1125,7 @@ var CV=(function(){
     },{passive:false});
   }
 
-  // ── Public API ───────────────────────────────
+  // â”€â”€ Public API â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   return{
     init:function(){initMouse();fetch_candles();if(S.refreshTimer)clearInterval(S.refreshTimer);S.refreshTimer=setInterval(fetch_candles,300000);},
     setPair:function(pair,btn){
@@ -1211,9 +1147,9 @@ var CV=(function(){
   };
 })();
 
-// ══════════════════════════════════════════════
-// TASK CORNER — CSV DRIVEN
-// ══════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// TASK CORNER â€” CSV DRIVEN
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 var taskData=[];
 var taskView='today';
 var taskExpanded=false;
@@ -1241,7 +1177,7 @@ function toggleTaskCorner(){
   taskExpanded=!taskExpanded;
   var tc=document.getElementById('taskCorner');
   tc.className='task-corner '+(taskExpanded?'expanded':'collapsed');
-  document.getElementById('task-toggle-icon').textContent=taskExpanded?'▼':'▲';
+  document.getElementById('task-toggle-icon').textContent=taskExpanded?'â–¼':'â–²';
 }
 
 function setTaskView(v){
@@ -1290,7 +1226,7 @@ window.addEventListener('load',function(){
 <!-- TASK CORNER (fixed bottom-right) -->
 <div class="task-corner collapsed" id="taskCorner">
   <div class="task-corner-hdr" onclick="toggleTaskCorner()">
-    <span class="task-corner-title">// DAILY TASKS <span id="task-toggle-icon">▲</span></span>
+    <span class="task-corner-title">// DAILY TASKS <span id="task-toggle-icon">â–²</span></span>
     <div class="task-views" onclick="event.stopPropagation()">
       <button class="tv-btn active" id="tv-today" onclick="setTaskView('today')">TODAY</button>
       <button class="tv-btn" id="tv-phase" onclick="setTaskView('phase')">PHASE</button>
@@ -1317,4 +1253,7 @@ function setMode(mode) {
 </script>
 </body>
 </html>
+
+
+
 
