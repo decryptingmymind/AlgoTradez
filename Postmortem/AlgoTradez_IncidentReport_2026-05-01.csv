@@ -1,0 +1,82 @@
+SECTION,CATEGORY,DETAIL
+INCIDENT OVERVIEW,Project,AI-OS Node Dashboard (algotradez-aios.azurewebsites.net)
+INCIDENT OVERVIEW,Date,2026-05-01 (Friday)
+INCIDENT OVERVIEW,Operator,Anthony Meza (Tony) + Claude AI
+INCIDENT OVERVIEW,Summary,"During a GUI Polish Friday session, multiple cascading file corruption events occurred in dashboard.html while attempting to add a favicon/logo icon. The corruption propagated through the Git → Azure deployment chain and caused the live dashboard to lose all CSS styling and tab functionality at various points."
+INCIDENT OVERVIEW,Files Affected,dashboard.html / index.html / app.py / requirements.txt / staticwebapp.config.json / Deploy-AIOS.ps1
+INCIDENT OVERVIEW,End State,"dashboard.html cleaned and live on Azure via zip deploy. AI-OS Node name confirmed live. CSS styling issue still being resolved at end of session."
+
+ROOT CAUSE #1,Name,UTF-8 Encoding Corruption via PowerShell Set-Content
+ROOT CAUSE #1,What Happened,"PowerShell's Set-Content command defaults to system encoding (Windows-1252) instead of UTF-8. When used to inject JavaScript or HTML strings containing em dashes (—) or emoji characters, it converted them to garbled sequences: — became â€"  and emoji became ðŸ garbage strings."
+ROOT CAUSE #1,Trigger,"Claude instructed Tony to use PowerShell string injection to add the setMode() kill switch JavaScript function and favicon base64 data into dashboard.html."
+ROOT CAUSE #1,Files Corrupted,dashboard.html (line 356 confirmed — also JavaScript section)
+ROOT CAUSE #1,Detection Method,"PowerShell corruption scan: $lines | Select-String 'â€' returned LineNumber: 356"
+ROOT CAUSE #1,Why It Matters,"Azure served the corrupted file to all users. The dashboard loaded but the AI Decision Log showed garbled text instead of clean signal data."
+
+ROOT CAUSE #2,Name,Base64 Favicon Injection Breaking APPS Tab
+ROOT CAUSE #2,What Happened,"A very long base64 string was injected into line 8 of dashboard.html via PowerShell. This caused downstream HTML parsing issues that broke the APPS+ tab — clicking it showed nothing. The base64 string itself was clean but the injection method disrupted the file structure."
+ROOT CAUSE #2,Trigger,Attempt to embed favicon.ico as inline base64 data URI so Azure could display the tab icon without needing a server route.
+ROOT CAUSE #2,Files Corrupted,dashboard.html (line 8 — <link rel=icon> tag + downstream tab structure)
+ROOT CAUSE #2,Detection Method,"Visual test — clicking APPS+ tab showed blank content. PowerShell scan confirmed emoji characters became garbled."
+ROOT CAUSE #2,Why It Matters,APPS+ tab is a core navigation element. Users could not access the apps grid.
+
+ROOT CAUSE #3,Name,Git Push ≠ Azure Deploy (Disconnected Chain)
+ROOT CAUSE #3,What Happened,"Git push to GitHub (github.com/decryptingmymind/AlgoTradez.git) does NOT auto-deploy to Azure. Azure was serving a completely separate copy of the files uploaded originally via az webapp up. Every git push during the session had zero effect on the live site."
+ROOT CAUSE #3,Trigger,"Assumed that az webapp up (original deploy) created a GitHub-connected deployment. It did not. az webapp deployment source show confirmed: branch: null / repoUrl: null."
+ROOT CAUSE #3,Files Affected,All — entire site was out of sync
+ROOT CAUSE #3,Detection Method,"az webapp deployment source show --name algotradez-aios confirmed no GitHub connection. Dashboard still showed MAMA NODE after multiple git pushes."
+ROOT CAUSE #3,Why It Matters,"Any changes made via VS Code + git push were invisible to Azure. The live site was always serving the original uploaded copy, never the updated version."
+
+ROOT CAUSE #4,Name,az webapp restart Does Not Clear Azure Cache
+ROOT CAUSE #4,What Happened,"Running az webapp restart after a deploy does not guarantee Azure serves the new files. Azure caches aggressively. The dashboard showed MAMA NODE instead of AI-OS Node even after multiple restarts."
+ROOT CAUSE #4,Trigger,Claude used az webapp restart as the deploy confirmation step throughout the session.
+ROOT CAUSE #4,Fix Applied,"Full stop/start cycle: az webapp stop → Start-Sleep 5 → az webapp start. This forces full cache clear."
+ROOT CAUSE #4,Rule Added,ENFORCED RULE saved to memory: Never use az webapp restart for production deploys. Always use stop/start.
+
+ROOT CAUSE #5,Name,Zip Deploy Including Conflicting index.html Files
+ROOT CAUSE #5,What Happened,"When the full ai_Os folder was zipped and deployed, it included apps/dashboard/index.html (a React app scaffold) alongside the root index.html redirect. Azure got confused about which file to serve as the entry point, causing permission errors and no-CSS rendering."
+ROOT CAUSE #5,Trigger,Compress-Archive with wildcard (*) captured all subfolders including the apps/ React scaffold.
+ROOT CAUSE #5,Files Conflicted,root/index.html vs apps/dashboard/index.html
+ROOT CAUSE #5,Fix Applied,"Selective zip deploy: only zip dashboard.html + index.html + app.py + requirements.txt — not the whole folder."
+
+TIMELINE,09:00 CDT,Session started. Dashboard live. SYSTEMS tab kill switch buttons targeted for today.
+TIMELINE,~10:00 CDT,Kill switch setMode() JS injected via PowerShell. UTF-8 corruption introduced (â€" on line 356).
+TIMELINE,~11:00 CDT,Favicon/logo icon work began. Base64 string injected via VS Code.
+TIMELINE,~12:00 CDT,APPS+ tab broke. Corruption confirmed in multiple areas.
+TIMELINE,~13:00 CDT,Git rollback attempted. Azure disconnect discovered.
+TIMELINE,~14:00 CDT,Zip deploy method established as correct Azure deploy path.
+TIMELINE,~15:00 CDT,index.html redirect created. Full folder zip caused CSS loss.
+TIMELINE,~16:00 CDT,app.py + requirements.txt created. Selective zip deploy attempted.
+TIMELINE,~17:30 CDT,AI-OS Node name rename confirmed live on Azure. CSS still resolving.
+TIMELINE,~17:45 CDT,Deploy-AIOS.ps1 script created in C:\Scripts. One-click deploy established.
+TIMELINE,17:48 CDT,Session ongoing — CSS fix in progress via Flask app.py serve method.
+
+CURRENT STATE,dashboard.html,Clean — corruption fixed. AI-OS Node name live. CSS rendering issue on Azure only (works locally).
+CURRENT STATE,index.html,Created — redirects root URL to dashboard.html
+CURRENT STATE,app.py,Created — Flask server to serve dashboard.html with correct MIME types
+CURRENT STATE,requirements.txt,Created — tells Azure to install Flask
+CURRENT STATE,Deploy-AIOS.ps1,Created at C:\Scripts — one-click deploy script (zip + Azure + git)
+CURRENT STATE,GitHub,All changes pushed to origin/main (decryptingmymind/AlgoTradez)
+CURRENT STATE,Azure,Running — deploying selective zip with app.py fix in progress
+CURRENT STATE,CSS Styling,IN PROGRESS — Azure not rendering inline CSS correctly without Flask MIME type fix
+
+NEXT STEPS,Step 1,Confirm Flask app.py deploy fixes CSS rendering on Azure
+NEXT STEPS,Step 2,Update Deploy-AIOS.ps1 to use selective zip (not full folder wildcard)
+NEXT STEPS,Step 3,Test Deploy-AIOS.ps1 desktop shortcut end-to-end
+NEXT STEPS,Step 4,Wire kill switch AUTO/PAUSE/KILL buttons to Trading Engine V1 API
+NEXT STEPS,Step 5,Connect GitHub → Azure CI/CD (Phase 2) for auto-deploy on push
+NEXT STEPS,Step 6,Resolve favicon — serve via Flask static route instead of base64 injection
+NEXT STEPS,Step 7,README.md merge conflict still pending resolution
+
+PREVENTION RULES,Rule 1,NEVER edit dashboard.html via PowerShell string injection. Always use VS Code directly.
+PREVENTION RULES,Rule 2,"Before every deploy run corruption check: $lines | Select-String 'â€' — if output exists, fix before deploying."
+PREVENTION RULES,Rule 3,NEVER use az webapp restart for production. Always use full stop/start cycle.
+PREVENTION RULES,Rule 4,NEVER zip full folder with wildcard (*). Always specify exact files in Compress-Archive.
+PREVENTION RULES,Rule 5,"Git push ≠ Azure deploy. Always run zip deploy command after code changes. Use Deploy-AIOS.ps1."
+PREVENTION RULES,Rule 6,Test all tab navigation locally before deploying. Open dashboard.html in browser via file:// first.
+PREVENTION RULES,Rule 7,Never inject emoji or special characters via PowerShell — always use VS Code with UTF-8 encoding confirmed (bottom right of VS Code shows UTF-8).
+
+TECHNICAL CONTEXT,Why This Matters,"AI-OS Node is a live financial dashboard connected to a real OANDA practice trading account. Corruption or downtime directly impacts visibility into Trading Engine V1 signals and trade execution. As the system approaches production with real capital ($100K target), zero-tolerance for deploy errors is required."
+TECHNICAL CONTEXT,Deploy Architecture,"Local (VS Code edit) → Compress-Archive (selective zip) → az webapp deploy (zip type) → Azure App Service (Python 3.11 / B1 SKU) → served via Flask app.py → browser at algotradez-aios.azurewebsites.net"
+TECHNICAL CONTEXT,Git Architecture,"Local repo at C:\Users\mylab\OneDrive\Desktop\ai_Os → GitHub (decryptingmymind/AlgoTradez) — version history and backup ONLY. Not connected to Azure auto-deploy."
+TECHNICAL CONTEXT,Why Flask app.py,"Azure App Service with Python runtime needs a WSGI entry point. Without app.py, Azure doesn't know how to serve HTML files with correct Content-Type headers. This causes browsers to ignore inline CSS."
